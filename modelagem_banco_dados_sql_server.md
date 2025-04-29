@@ -77,8 +77,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
 
 # Observação.: Para colar uma imagem em um arquivo Markdown (.md) no VSCode, você pode usar a seguinte sintaxe:
 
-Imagem local
-![sistema de bancos de dados](C:\Users\luist\OneDrive\Imagens.jpg)
+![sistema de bancos de dados](./imagem_db.jpg)
 
 # **Usuários de Bancos de Dados**
 
@@ -101,7 +100,7 @@ Imagem local
 . Um esquema no modelo hierárquico é um diagrama de estrutura em árvore.
 . O acesso aos dados é sempre unidirecsional, a partir do pai para o filho.
 
-![Modelo Hierárquico de bancos de dados](C:\Users\luist\OneDrive\Imagens.jpg)
+![Modelo Hierárquico de bancos de dados](./imagem_modelo_hierárquico.jpg)
 
 # **Modelo em Rede**
 
@@ -112,16 +111,16 @@ Imagem local
 
 # **Mdelo em Rede**
 
-![Modelo em Rede de bancos de dados](C:\Users\luist\OneDrive\Imagens_rede.jpg)
+![Modelo em Rede de bancos de dados](./imagem_rede.jpg)
 
 # **Modelo Relacional**
 
 . Neste modelo os dados são separados em entidades, conforme cada assunto, e registrados como atributos dessas entidades.
 . As entidades se relacionam entre si e permitem que os dados sejam armazenados e recuperados de forma rápida e segura.
 
-![Modelo Relacional de bancos de dados](C:\Users\luist\OneDrive\Imagens_relacional.jpg)
+![Modelo Relacional de bancos de dados](imagem_relacional.jpg)
 
-# **Introdução ao Modelo Relacional** 21:32H
+# **Introdução ao Modelo Relacional** 
 
 
 
