@@ -173,7 +173,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
  - **Chave Primária**: coluna (atributo) que identifica um registro de forma exclusiva na tabela. Por exemplo, o CPF de um cliente, contendo um valor que não se repete.
  - **Chave estrangeira**: coluna que define como as tabelas se relacionam umas com as outras. Uma FK se refere a uma PK ou a uma chave única em outra tabela ( ou na mesma tabela). Por exemplo, na tabela de pedidos podemos ter uma chave estrangeira efetuando o relacionamento com a chave primária na tabela de clientes.
 
-# ** Análise de Requisitos**
+# **Análise de Requisitos**
 
  - Nesta fase, são realizadas reuniões para coleta de informações, que analisam o que é exigido para o banco de dados a ser criado.
  - Os processos de negócio são definidos, e as entidades, atributos e relacionamentos do BD são documentados.
@@ -184,7 +184,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
  - MER, cria um diagrama entidade-relacionamento a partir das especificações do negócio ou narrativas do usuário. Permite ilustrar as entidades em um negócio e também relacionamentos entre elas. Construímos o MER durante a fase de análise no ciclo de vida de desenvolvimento do sistema.
  - Um MER separa a informação necessária a um negócio das atividades que são realizadas no negócio.
 
-# **Componentes do MER
+# **Componentes do MER**
 
  - **Entidade**: algo significativo, sobre o qual devemos possuir informações. Como exemplos, temos clientes, funcionários, pedidos e produtos.
  - **Atributos**: algo que descreve ou qualifica uma entidade. Por exemplo, a entidade cliente possui atributos que descrevem seu nome, endereço, telefone, número de identificação, entre outros. Atributos podem ser obrigatórios ou opcionais.
@@ -237,7 +237,7 @@ Neste nível, detalhes da implementação não aparecem, porém é suficientemen
 # **Arquitetura de Três Níveis**
 
 
-![alt text](Assets/arquitetura_niveis.jpg)
+![Modelo arquitetura de bancos de dados](Assets/arquitetura_niveis.jpg)
 
 # **Esquema do Banco de Dados**
 
@@ -251,14 +251,14 @@ Neste nível, detalhes da implementação não aparecem, porém é suficientemen
 As principais etapas no desenvolvimento de um DB são:
 
  - 1. Especificação e Análise de Requisitos
-      a. Os requisitos são documentos
+      - Os requisitos são documentos
  - 2. Projeto Conceitual
-      a. Baseados nos requisitos
+      - Baseados nos requisitos
  - 3. Projeto Lógico
-      a. Expresso em um modelo de dados, como o relacional
+      - Expresso em um modelo de dados, como o relacional
  - 4. Projeto Físico
-      a. Especificações para armazenar e acessar o banco de dados
-      b. Implementação do DB, inserção do DB, inserção de dados reais e manutenção.
+      - Especificações para armazenar e acessar o banco de dados
+      - Implementação do DB, inserção do DB, inserção de dados reais e manutenção.
 
 # **Tarefas para Modelagem**
 
@@ -282,7 +282,150 @@ Após o levantamento dos requisitos, estes são transformaddos em um **Modelo**
 
 O modelo é posteriormente refinado com o uso de técnicas específicas, e finalmente implementado em um banco de dados físico.
 
-# **Modelo e Diagrama Entidade-Relacionamento**
+# **Modelo Entidade-Relacionamento**
+
+Também conhecido pela sigla MER, trata-se de um modelo conceitual usado para descrever objetos envolvidos no domínio de um sistema a ser construído, incluindo seus atributos e relacionamentos.
+O MER permite representar de forma abstrata a estrutura que irá constituir o banco de dados.
+É composto pelos seguintes objetos:
+
+ - Entidades
+ - Atributos
+ - Relacionamentos
+  
+# **MER**
+
+Um modelo entidade relacionamento é uma maneira sistemática de descrever e definir um processo de negócio.
+O processo é modelado como componentes (entidades) que são ligadas umas às outras por relacionamentos que indicam as dependências entre elas.
+As entidades podem ter várias propriedades (atributos) que as caracterizam.
+Diagramas são criados para representar graficamente entidades, atributos e relacionamentos, denominados **Diagramas Entidade- Relacionamento (DER).**
+
+# **Modelo e Diagramas**
+
+ - Modelo ER (MER): lista de entidades, atributos e relacionamentos, que traz informações sobre tipos de dados, restrições, descrições de entidades e outras.
+ - Diagrama ER (DER): representação gráfica associada ao MER ( ou parte dele).
+
+# **Componentes do DER**
+
+ - Retângulos - Representam entidades
+ - Elipse - Representam atributos
+ - Losangos - representam relacionamentos
+ - Linhas - ligam atributos a entidades e entidades a relacionamentos.
+
+# **Exemplo de DER**
+
+!![Modelo DER de bancos de dados](Assets/imagem_DER.png)
+
+# **Entidade**
+
+ - Algo de importância para um usuário ou organização que precisa ser representado em um banco de dados.
+ - Representar um tema, tópico ou conceito de negócio.
+ - Cada objeto de uma entidade é denominado de **Intância de Entidade.**
+ - Uma entidade pode ter existência física ou abstrata.
+
+Ex.: Empregados, Livros, Vendas, Produtos.
+
+ - Nomeamos as entidades usando substantivo que representam de forma clara e objetiva sua função.
+ - Por exemplo, podemos ter em um sistema as entidades Produto, Cliente, Venda, Estoque, Catálogo, entre outras.
+ - Representamos as entidades em um DER por meio de retângulos contendo o nome da entidade.
+
+# **Algumas regras de nomeação das Entidades**
+
+ - Nomes de Entidade:
+    - Devem começar com uma letra;
+    - Usar palavra no singular;
+    - Não podem ter espaços ou alguns caracteres especiais;
+    - Alguns caracteres com "$", "#" e "_" são permitidos em alguns bancos de dados.
+
+ - Os nomes das colunas devem ser únicos dentro de uma tabela.
+ - Os nomes de entidades / tabelas devem ser únicos dentro do esquema.
+
+# **Instância de Entidades**
+
+Uma instância em si é uma descrição da estrutura e formato das ocorrências da entidade, como uma "receita" ou "planta".
+Uma instância de entidade é uma ocorrência específica de uma entidade.
+
+![Modelo Iinstância de bancos de dados](Assets/instancia.png)
+
+# **Atributos**
+
+ - Os atributos descrevem características da entidade, como por exemplo: fabricante, modelo, cor, placa, etc.
+ - Os atributos possuem um tipo de dados (domínio) nome e valor específico.
+  
+# **Representando Atributos**
+
+ - Os atributos podem ser representados por uma elipse contendo o seu nome, ligado à entidade que qualifica
+ - Opcionalmente, podemos representar um atributo apenas pelo seu nome ligado à entidade, sem utilizar a elipse.
+
+# **Tipos de Atributos**
+
+ - Simples
+ - Composto
+ - Multivalorado
+ - Determinante
+ - Identificador entre outros.
+
+# **Atributos Simples / Atômico**
+
+Não posui características especiais, e não indivisíveis.
+
+Ex.: Nome da empresa, CPF, CNPJ.
+
+# **Atributos Composto**
+
+É formado por itens menores; pode ser subdividido em outros atributos.
+
+Ex.: Endereço da Empresa:  **Empresa** -> Endereço: Rua + CEP + Bairro ( subatributos).
+
+# **Atributo Multivalorado**
+
+Pode conter mais de um valor para um mesmo registro (informação).
+
+Ex.: Telefone da empresea: **Empresa** -> *Telefone ( '*' para dizer que é multivalorado)
+
+# **Atributo Determinate**
+
+Define de forma única as instâncias de uma entidade.
+Não podem existir duas instãncias com o mesmo valor nesse atributo.
+
+Ex.: CNPJ da empresa, Código de Produto.
+
+**Empresa** -> <u>CNPJ</u> ( Colocar um sumblinhado no atributo determinante)
+
+# **Atributo Identificadores ("Chaves")**
+
+Uma *chave* identifica uma instância específica na classe de entiodade.
+
+Ex.: CPF, CódigoProduto, Matrícula, ID_Setor
+
+As chaves podem ser únicas ou não-únicas:
+
+ - Únicas: o valor dos dados da chave é único na entidade
+ - NãO-única: usada para agrupar instâncias de classe em categorias.
+
+As chaves podem ser compostas, consistindo de dois ou mais atributos combinados.
+  
+![Exemplos de Representação de Entidades e Atributos](Assets/imagem_representacao.png)
+
+# **Exemplos de Representação de Entidades e Atributos**
+
+Podemos também representar uma entidade de forma textual:
+
+Produto(<u>Cod_Produto</>,Nome_Produto, Preço, Qtde_Estoque), **Cod_Produto** grifado por ser determinate.
+
+# **Entidas x Relação**
+
+ - Uma entidade é um conceito do mundo real, como por exemplo um Cliente ou um Produto.
+ - 
+
+
+
+
+
+
+
+
+
+
 
 
   
