@@ -79,8 +79,6 @@ Bancos de dados encontram aplicações em inúmeras áreas, como:
 
 A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e as aplicações que acessam os dados.
 
-# Observação.: Para colar uma imagem em um arquivo Markdown (.md) no VSCode, você pode usar a seguinte sintaxe:
-
 ![sistema de bancos de dados](./Assets/imagem.jpg)
 
 # **Usuários de Bancos de Dados**
@@ -162,6 +160,132 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
 
 # **Banco de Dados Relacional**
 
+ - Um Banco de dados relacional é uma coleção de relações, que são tabelas bidimensionais, onde os dados são armazenados.
+ - Como exemplo, podemos querer armazenar dados sobre os clientes de uma loja. Pora isso criamos tabelas para guardar diferentes conjuntos de dados relacionados a esses cslientes, como dados pessoais, dados de compras, crédito, e outras.
+  
+# **Componentes de um Banco de Ddos Relacional**
+
+ - **Tabela**: estrutura básica de armazenamento no SGBDR. Armazena todos os dados necessários sobre algo do mundo real, como clientes, pedidos ou produtos, também chamada de Relação. Um banco de dados relacional pode conter uma ou mais tabelas.
+ - **Tupla**: ou linha / registro, representa todos os dados requeridos por uma determinada ocorrência de entidade em particular. Por exemplo, os dados de um cliente específico. Cada linha em uma tabela dever ser identificada por uma chave primária, de modo a não haver duplicação de registros.
+ - **Coluna**: unidade que armazena um tipo específico de dado (valor) - ou não armazena  nada, com valor nulo. Esta é uma *coluna não chave*, significando que seu valor pode se repetir em outras linhas da tabela.
+ - **Relacionamento**: associação entre as entidades (tabelas), conectadas por chaves primárias e chaves estrangeiras.
+ - **Outros**: índices, SP, Triggers, etc.
+ - **Chave Primária**: coluna (atributo) que identifica um registro de forma exclusiva na tabela. Por exemplo, o CPF de um cliente, contendo um valor que não se repete.
+ - **Chave estrangeira**: coluna que define como as tabelas se relacionam umas com as outras. Uma FK se refere a uma PK ou a uma chave única em outra tabela ( ou na mesma tabela). Por exemplo, na tabela de pedidos podemos ter uma chave estrangeira efetuando o relacionamento com a chave primária na tabela de clientes.
+
+# ** Análise de Requisitos**
+
+ - Nesta fase, são realizadas reuniões para coleta de informações, que analisam o que é exigido para o banco de dados a ser criado.
+ - Os processos de negócio são definidos, e as entidades, atributos e relacionamentos do BD são documentados.
+ - A análise é extremamente importante para o sucesso do projeto do BD.
+
+# **Modelo Entidade-Relacionamento**
+
+ - MER, cria um diagrama entidade-relacionamento a partir das especificações do negócio ou narrativas do usuário. Permite ilustrar as entidades em um negócio e também relacionamentos entre elas. Construímos o MER durante a fase de análise no ciclo de vida de desenvolvimento do sistema.
+ - Um MER separa a informação necessária a um negócio das atividades que são realizadas no negócio.
+
+# **Componentes do MER
+
+ - **Entidade**: algo significativo, sobre o qual devemos possuir informações. Como exemplos, temos clientes, funcionários, pedidos e produtos.
+ - **Atributos**: algo que descreve ou qualifica uma entidade. Por exemplo, a entidade cliente possui atributos que descrevem seu nome, endereço, telefone, número de identificação, entre outros. Atributos podem ser obrigatórios ou opcionais.
+ - **Relacionamento**: trata-se de uma associação nemeada entre entidades, com um grau de associação. Por exemplo, clientes podem estar associados a pedidos.
+
+# **Convenções para modelagem de entidades, relacionamentos e atributos**
+
+ - **Entidades**: nome único, singular; em caixa alta;
+ - **Atributos**: nome no singular; caixa baixa; atributos obrigatórios marcados com'*'; identificador único marcado com'#'.
+ - **Relacionamentos**: nome identificador (verbo); opcionalidade("deve ser" ou "pode ser"); grau ou cardinalidade ('um e apenas um', ou 'um ou mais')
+ - **Cardinalidade**: significa que cada entidade pode ser ou deve em relação de forma uma e apenas uma ou uma ou mais com outra entidade.
+
+  **Identificador único (UID)**
+
+  - Um identificador único é qulquer combinação de atributos ou relacionamentos que são usados para distinguir ocorrências de uma entidade. Cada ocorrência da entidade deve ser identificável de forma exclusiva.
+
+# **Modelagem de Dados - Níveis**
+
+## **Classificamos o processo de modelagem de dados em tr~es níveis**:
+
+ - Modelo Conceitual ( alto nível) - MCD -> Modelo Conceitual de Dados.
+ - Modelo Lógico - MLD
+ - Modelo Físico (baixo nível) - MFD
+
+# **Modelo Conceitual**
+
+Esta é a primeira fase da modelagem, onde representamos o mundo real por meio de uma visão simplificada dos dados e seus relacionamentos. Assim poderemos determinar quais informações serão armazenadas no DB.
+Neste nível o projeto é independente de SGBD.
+
+Exemplo: 
+**Cadastro de Produtos em uma Loja**
+Dados necessários: Nome do produto, categoria de produto (limpeza, higiene, etc), código do fornecedor, tipo de embaçlagem, tamanho, quantidade.
+Neste nível, detalhes da implementação não aparecem, porém é suficientemente detalhado para a ponto de ser possível descrever os tipos de dados requeridos, seus relacionamentos entre si e regras de consistência.
+
+# **Modelo Lógico**
+
+![Modelo Lógico de bancos de dados](./Assets/imagem_modelo_logico.jpg)
+
+ - Um modelo lógico possui conceitos que os usuários são capazes de entender, ao mesmo tempo em que não está distante do modelo físico do banco de dados.
+ - Neste nível o projeto é independente do SGBD.
+ - Consiste na especificação lógica dos dados em um formato adequado ao SGBD escolhido. Os tipos de dados são completamente definidos.
+  
+# **Modelo Físico**
+
+![Modelo Físico de bancos de dados](./Assets/modelo_físico.jpg)
+
+ - A partir de um modelo lógico nós derivamos o modelo físico, onde se detalham os componentes de estrutura física do banco de dados, incluindo as tabelas, campos, tipos de valores, restrições, etc.
+ - Ao criarmos o modelo físico, poderemos partir para a implementação física do banco de dados, utilizando o SGBD mais adequado.
+
+# **Arquitetura de Três Níveis**
+
+
+![alt text](Assets/arquitetura_niveis.jpg)
+
+# **Esquema do Banco de Dados**
+
+ - Um esquema é uma definição do Banco de Dados especificada durante o projeto, armazenada no *Dicionário de Dados*.
+ - Um esquema (Schema) raramente muda durante a vida do BD.
+ - Trata-se da organização dos dados em um plano que mostra como o banco é construído.
+ - O esquema define tabelas, campos, relacionamentos, visões, funções e muitos outros elementos que compõem o BD.
+  
+# **Etapas do desenvolvimento de um BD.**
+
+As principais etapas no desenvolvimento de um DB são:
+
+ - 1. Especificação e Análise de Requisitos
+      a. Os requisitos são documentos
+ - 2. Projeto Conceitual
+      a. Baseados nos requisitos
+ - 3. Projeto Lógico
+      a. Expresso em um modelo de dados, como o relacional
+ - 4. Projeto Físico
+      a. Especificações para armazenar e acessar o banco de dados
+      b. Implementação do DB, inserção do DB, inserção de dados reais e manutenção.
+
+# **Tarefas para Modelagem**
+
+As tarefas a seguir devem ser realizadas para que seja possível efetuar modelagem de dados e projeto de BD funcional:
+
+ - Identificar os tiposs de entidade
+ - Identificar atributos
+ - Identificar relacionamentos
+ - Criar e associar chaves
+ - Normalizar para reduzir redundância
+ - Desnormalizar para aumentar performance.
+
+# **MER**
+
+Após o levantamento dos requisitos, estes são transformaddos em um **Modelo**
+**Entidade-Relacionamento (MER)**, o qual consiste dos seguintes elementos:
+
+ - Entidades
+ - Relacionamentos
+ - Atributos
+
+O modelo é posteriormente refinado com o uso de técnicas específicas, e finalmente implementado em um banco de dados físico.
+
+# **Modelo e Diagrama Entidade-Relacionamento**
+
+
+  
 
 
 
