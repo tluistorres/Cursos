@@ -81,7 +81,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
 
 # Observação.: Para colar uma imagem em um arquivo Markdown (.md) no VSCode, você pode usar a seguinte sintaxe:
 
-![sistema de bancos de dados](./Assets/imagem_db.jpg)
+![sistema de bancos de dados](./Assets/imagem.jpg)
 
 # **Usuários de Bancos de Dados**
 
@@ -104,7 +104,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
  - Um esquema no modelo hierárquico é um diagrama de estrutura em árvore.
  - O acesso aos dados é sempre unidirecsional, a partir do pai para o filho.
 
-![Modelo Hierárquico de bancos de dados](./Assets/imagem_hierárquico.jpg) 
+![Modelo Hierárquico de bancos de dados](./Assets/Imagem_hierárquico.jpg) 
 
 # **Modelo em Rede**
 
@@ -154,7 +154,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
 
 # **Componentes do Modelo Relacional**
 
-# ***O modelo relacional é composto, basicamente por:***
+### O modelo relacional é composto, basicamente por:
 
  - Coleções de objetos ou relações que armazenam os dados
  - Um conjunto de operadores que agem nas relações, produzindo outras relações
