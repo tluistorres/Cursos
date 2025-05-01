@@ -79,7 +79,7 @@ Bancos de dados encontram aplicações em inúmeras áreas, como:
 
 A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e as aplicações que acessam os dados.
 
-![sistema de bancos de dados](./Assets/imagem.jpg)
+![sistema de bancos de dados](./Assets/image_alura_db.jpg)
 
 # **Usuários de Bancos de Dados**
 
@@ -95,7 +95,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
  - Backup e Restauração
  - Restrições de Integridade - não poder cadastrar um produto sem que tenha o fornecedor, cadastrar o usuário sem que ele forneça o CPF para que seja escrito na tabela.
 
-# **Modelo Hieráquico**
+# **Modelo Hierárquico**
 
  - Neste modelo os dados são organizaddos de forma hierárquica, com conjuntos de tipos de registros interconectados por meio de ligações.
  - Uma ligação representa uma relação entre dois tipos de registros: pai e filho.
@@ -410,14 +410,160 @@ As chaves podem ser compostas, consistindo de dois ou mais atributos combinados.
 
 Podemos também representar uma entidade de forma textual:
 
-Produto(<u>Cod_Produto</>,Nome_Produto, Preço, Qtde_Estoque), **Cod_Produto** grifado por ser determinate.
+Produto(<u>Cod_Produto</u>,Nome_Produto, Preço, Qtde_Estoque), **Cod_Produto** grifado por ser determinate.
 
 # **Entidas x Relação**
 
  - Uma entidade é um conceito do mundo real, como por exemplo um Cliente ou um Produto.
+ - Uma Relação é um conjunto de registros (tuplas) que representam um modelo de uma entidade.
+ - Cada registro representa uma instância de entidade, e o conjunto de todas as instâncias, com seus atributos, é chamado de Relação.
+  
+# **Relação**
+
+Tabela bidimensional com características específicas, compostas por linhas e colunas, criada a partir de uma entidade.
+
+Características de uma relação:
+
+ - Linhas contém dados sobre instâncias de uma entidade (registros)
+ - Colunas contém dados sobre atributos da entidade (campos)
+ - Cada célula da tabela armazena um único valor
+ - Todos os valores em uma coluna são do mesmo tipo (domínio)
+ - Cada coluna posui um nome único
+ - Não há duas linhas idênticas
+ - As relações geralmente geram tabelas no banco.
+
+# **Exemplo de uma Relação**
+
+![alt text](Assets/imagem_relacao.jpg)
+
+"Toda Relação é uma tabela, mas nem toda tabela é uma relação"
+
+# **Relação - Exemplo completo**
+
+![alt text](Assets/imagem_relacao2.jpg)
+
+# **Relacionamentos**
+
+ - As Entidades podem ser conectadas entre si por meio de Relacionamentos
+ - Trata-se de uma estrutura que indica a associação de elementos de uma ou mais entidades.
+
+# ** Porque precisamos de realacionamentos?**
+
+ - Como os dados de diferentes entidades são armazenados em tabelas distintas, geralmente precisamos combinar duas ou mais tabelas para responder às perguntas específicas dos usuários
+ - Por exemplo, podemos querer saber quais produtos, e em qual quantidade, foram adquiridos por um cliente em particular. Precisaremos então de dados das tabelas de clientes, de pedidos e produtos para obter essa informação.
+
+# **Representando Relacionamentos**
+
+ - Representamos um Relacionamento em um DER por meio de um losango que conecta uma ou mais entidade.
+
+# ** Grau de um Relacionamento**
+
+O grau de um relacionamento define o número de entidades que participam do relacionamento. Assim, um relacionamento pode ser:
+
+ - Unário
+ - Binário
+ - Ternário
  - 
+# ***Os relacionamentos mais comuns são os de grau (Binários)***
 
+# **Relacionamento Unário (Recursivo)**
 
+![alt text](Assets/imagem_relacionamento_unário.jpg)
+
+# **Relacionamento Binário**
+
+![alt text](Assets/imagem_relacionamento_binario.jpg)
+
+# ** Relacionamento Ternpário**
+
+![alt text](Assets/imagem_relacionamento_ternario.jpg)
+
+# **Relacionamento entre Tabelas**
+
+Uma tabela é relacionada com outras tabelas. Por exemplo, um produto é vendido em uma loja.
+
+![alt text](Assets/imagem_relacionamento_tabelas.xcf)
+
+O grau de um Relacionamento indica o número de entidades envolvidas no relacionamento, como ppor exemplo unário, binário e ternário.
+
+# **Efetuando relacionamento entre múltiplas tabelas**
+
+ - Cada linha de dados em uma tabela deve ser identificada de forma única usando-se uma Chave Primária (identificador exclusivo).
+ - Usamos uma Chave Estrangeira para relacionar os dados entre múltiplas tabelas.
+ - Usamos para isso o relacionamneto entre chave primária de uma tabela com a chave estrangeira em outra tabela.
+
+# **Chaves**
+
+Uma chave consiste em uma ou mais colunas de uma relação cujos valores são usados para identificar de forma exclusiva uma linha ou conjunto de linhas.
+
+Pode ser única (identifica uma única linha) ou não única (identifica um conjunto de linhas).
+
+Únicas (Unique): Candidata, Composta, Primária, Surrogada.
+Não única (Non_Unique): Estrangeira.
+
+# **Chave Candidata**
+
+ - Atributo ou grupo de atributos com o potencial para se tornarem uma chave primária.
+ - Uma chave candidata que não seja usada como chave primária será considerada com  **Chave Alternativa**.
+Ex.: Campos Num_Matrícula e CPF em uma tabela podem ter registros de alunos.
+
+# **Chave Primária**
+
+ - Chave candidata escolhida para ser a chave *principal* na relação.
+ - Identifica de forma *exclusiva* os registros em uma tabela, não podendo ter repetição de valores nem tampouco valor nulo.
+ - Primary key / PK.
+
+# **Chave Estrangeira**
+
+ - Coluna de uma tabela que estabelece um *Relacionamento com a Chave Primária* (PK) de outra tabela.
+ - É a partir da chave estrangeiraa (Foreign Key / FK) que sabemos com qual registro em outra tabela um registro está relacionado.
+
+# **Chave Composta**
+
+ - Chave que é composta de dois ou mais atributos (colunas).
+ - Geralmente empregada quando não é possível utilizar uma única coluna de uma tabela para identificar de forma exclusiva seus registros.
+
+# **Chave Surrogada / Substituta**
+
+ - Valor numérico, único, adicioanado a uma relação para servir com chave primária.
+ - Não possui significado para os usuários e geralmente fica escondida nas aplicações.
+ - As chaves substitutas são frequentemente usadas no lugar de uma chave primária composta.
+
+# ***Instruções para criação de chaves primárias e estrangeiras***
+
+ - Não é possível haver valores duplicados em uma chave primária.
+ - No geral, não é possível alterar o valor de uma chave primária.
+ - Chaves estrangeiras são baseadas em valores de dados, classificadas como ponteiros lógicos.
+ - Um valor de uma chave estrangeira deve corresponder a um valor existente em uma chave primária associada ( ou valor de chave única). Caso contrário, deve ser nulo (NULL).
+ - Uma chave estrangeira deve referenciar uma chave primária ou uma coluna de chave única.
+
+[text](Assets/imagem_chavePK_chaveFK.jpg)
+
+![alt text](AAssets/imagem_dominio.jpg)
+
+# **Cardinalidades**
+
+A cardinalidade diz respeito ao número de itens que se relacionam nas entidades.
+A cardinalidade pode ser máxima ou mínima, significando respectivanmente os números mínimo e máximo de instâncias de cada entidade associadas no relacionamento.
+Cardinalidade Máxima: trata-se do número máximo de instâncias de entidades que podem participar em um relacionamento. Pode ser 1 ou N (muitos).
+
+Cardinalidade Mínima: número mínimo de instâncias de entidade que devem obrigatoriamente participar em um relacionamento; zero é participação opcional e um é obrigatória.
+
+# **Simbologia para Cardinalidades**
+
+![alt text](Assets/imagem_cardinalidade.jpg)
+
+# **Simbologia para Cardinalidade**
+
+![alt text](Assets/imagem_simbologia_cardinalidade.jpg)
+
+ 
+![alt text](Assets/imagem_exemplo_cardinalidade.jpg)
+ 
+
+![alt text](Assets/imagem_cardinalidade_PeterChen.jpg)
+
+# **Relacionamento Binário um-para-um 1:1**
 
 
 
