@@ -447,7 +447,7 @@ Características de uma relação:
  - As Entidades podem ser conectadas entre si por meio de Relacionamentos
  - Trata-se de uma estrutura que indica a associação de elementos de uma ou mais entidades.
 
-# ** Porque precisamos de realacionamentos?**
+# **Porque precisamos de realacionamentos?**
 
  - Como os dados de diferentes entidades são armazenados em tabelas distintas, geralmente precisamos combinar duas ou mais tabelas para responder às perguntas específicas dos usuários
  - Por exemplo, podemos querer saber quais produtos, e em qual quantidade, foram adquiridos por um cliente em particular. Precisaremos então de dados das tabelas de clientes, de pedidos e produtos para obter essa informação.
@@ -456,15 +456,15 @@ Características de uma relação:
 
  - Representamos um Relacionamento em um DER por meio de um losango que conecta uma ou mais entidade.
 
-# ** Grau de um Relacionamento**
+# **Grau de um Relacionamento**
 
 O grau de um relacionamento define o número de entidades que participam do relacionamento. Assim, um relacionamento pode ser:
 
  - Unário
  - Binário
  - Ternário
- - 
-# ***Os relacionamentos mais comuns são os de grau (Binários)***
+  
+# ***Os relacionamentos mais comuns são os de grau (Binário)***
 
 # **Relacionamento Unário (Recursivo)**
 
@@ -474,7 +474,7 @@ O grau de um relacionamento define o número de entidades que participam do rela
 
 ![alt text](Assets/imagem_relacionamento_binario.jpg)
 
-# ** Relacionamento Ternpário**
+# **Relacionamento Ternário**
 
 ![alt text](Assets/imagem_relacionamento_ternario.jpg)
 
@@ -482,7 +482,7 @@ O grau de um relacionamento define o número de entidades que participam do rela
 
 Uma tabela é relacionada com outras tabelas. Por exemplo, um produto é vendido em uma loja.
 
-![alt text](Assets/imagem_relacionamento_tabelas.xcf)
+![alt text](Assets/imagem_relacionamento_tabelas.jpg)
 
 O grau de um Relacionamento indica o número de entidades envolvidas no relacionamento, como ppor exemplo unário, binário e ternário.
 
@@ -539,7 +539,8 @@ Ex.: Campos Num_Matrícula e CPF em uma tabela podem ter registros de alunos.
 
 [text](Assets/imagem_chavePK_chaveFK.jpg)
 
-![alt text](AAssets/imagem_dominio.jpg)
+
+![alt text](Assets/imagem_dominio.jpg)
 
 # **Cardinalidades**
 
