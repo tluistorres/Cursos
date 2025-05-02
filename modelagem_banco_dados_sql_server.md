@@ -658,6 +658,94 @@ Ex.: Suponha uma tabela de cadastro de alunos.
 Todo aluno deverá ter um nome cadastrado, de modo que esse campo é obrigatório (atributo não-nulo)
 Nem todo aluno possui telefone, portanto esse campo não é obigatório (atributo nulo), permite que deixe esse campo sem nada, o campo fica vazio, desde que seja previsto na modelagem.
 
+![alt text](Assets/imagem_ValoresNulos.jpg)
+
+# **Integridade de Chave**
+
+Os valores inseridos na coluna de chave primária (PK) devem ser sempre únicos, não admitindo-se repetições nesses valores.
+Desta forma, as tuplas (registros) serão sempre distintos.
+Os valores de chave primária também não podem ser nulos.
+
+# **Integridade Definida pelo Usuário**
+
+Diz respeito a regras de negócio específicas que são definidas pelo usuário do banco de dados.
+Por exemplo, pode-se definir que uma coluna somente aceitará um conjunto restrito de valores.
+
+# **Notações Gráficas e Diagramação**
+
+# **Diagramação**
+
+ - O Diagrama Entidade Relacionamento é a representação gráfica de um MER, que é um modelo conceitual.
+ - O uso de um diagrama facilita a modelagem e a comunicação entre os membros da equipe de desenvolvimento, permitindo que todos falem a mesma "língua" durante o processo.
+ - A notação original do DER foi proposta por Peter Chen.
+  
+Exitem vários métodos para representar relacionamentos entre entidades.
+As notações gráficas mais utilizadas em modelagem de dados são:
+ - IDEF1X
+ - Bachman
+ - Min-Max
+- Pé de Galinha (Crow's Foot)
+- Martin
+- UML
+- Peter Chen
+
+# **Diagramação**
+
+![alt text](Assets/imagem_ValoresNulos.jpg)
+
+# **Os mais comuns é utilizar o Diagrama de Peter Chen( utilizado nas escolas de forma acadêmica) ou Pé de Galinha(muito comum no mercado)**
+
+# **Softwares para Diagramação**
+
+Ferramentas CASE
+
+ - Astah
+ - Lucidchart
+ - erwin Data Modeler
+ - ERDPlus
+ - GenMyModel
+ - Star UML
+ - Microsoft Visio
+ - MySQL Workbench
+ - Visual Paradigm
+  
+# **Diagramação - Peter Chen**
+
+A notação de Peter Chen para DER utiliza retângulos para representar Entidades, e losangos para os Relacionamentos. Atributos são representados por elipses.
+
+![alt text](Assets/imagem_diagramacao_PeterChen.jpg)
+
+# **Diagramação: Pé-de-galinha (Crow's Foot)**
+
+![alt text](Assets/imagem_diagramacao_pe_galinha.jpg)
+
+![alt text](Assets/imagem_relac_forte_fraco.png)
+
+![alt text](Assets/imagem_notacao_pe_galina_visio.jpg)
+
+![alt text](Assets/imagem_notacao_lucidechart.png)
+
+# **Dicionário de Dados**
+
+ - Um dicionário de dados é um documento usdo para armazenar informações sobre o conteíúdo, formato e a estrutura de um banco de dados, assim como os relacionamentos entre os seus elementos.
+ - É importante manter um dicionário de dados para limitar erros ao criar a estrutura física do banco de dados no computador.
+ - Também chamado de "Repositório de Metadados"
+  
+![alt text](Assets/imagem_dicionario_dados.png)
+
+![alt text](Assets/imagem_dicionario_dados_exemplo.png)
+
+![alt text](Assets/imagem_dicionario_dados_exemplo.png)
+
+![alt text](AAssets/imagem_dicionario_dados_exemplo2.png)
+
+![alt text](Assets/imagem_dicionario_tabela_editora.png)
+
+![alt text](Assets/imagem_dicionario_relacionamento.jpg)
+
+# **Dependências**
+
+# **Dependência Funcional**
 
 
 
