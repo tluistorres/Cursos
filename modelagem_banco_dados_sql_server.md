@@ -566,6 +566,100 @@ Cardinalidade Mínima: número mínimo de instâncias de entidade que devem obri
 
 # **Relacionamento Binário um-para-um 1:1**
 
+Uma instância de entidade única em uma entidade está relacionada com uma instância de entidade única em outra entidade.
+
+![alt text](Assets/imagem_relac_binário.jpg)
+
+# **Relacionamento Binário um-para-muitos 1:N**
+
+![alt text](Assets/imagem_relac_um_para_muitos_PeterChen.jpg)
+
+![alt text](Assets/imagem_relac_Binario_muitos_muitos.jpg)
+
+![alt text](Assets/imagwm_real_binaria_n_n_Peter_Chen.jpg)
+
+![alt text](Assets/imagem_desmebramento_n_n.jpg)
+
+# **Restrinções de integridade**
+
+Integridade de Dados
+
+Manutenção e garantia da consistência e precisão dos dados, sendo um aspecto crítico no design, implementação e uso de sistemas de armazenamento de dados.
+
+A integridade é atingida por meio da aplicação de *Restrições de Integridade*
+
+# **Restrições de Integridade**
+
+ - Integridade Referencial
+ - Integridade de Domínio
+ - Integridade de Vazio
+ - Integridade de Chaves
+ - Integridade Definida pelo Usuário
+  
+# **Integridade de Domínio**
+
+Valores inseridos em uma coluna devem sempre obedecer à definição dos valores que são permitidos para essa coluna - os valores do *domínio*.
+
+EX.: em uma coluna que armazena preços de mercadorias, os valores admitidos são do tipo domínio numérico - ou seja, apenas números.
+
+# **Integridade de Domínio - Fatores**
+
+ - Tipo de Dado do campo
+ - Representação interna do tipo de dado
+ - Presença ou não do Dado
+ - Intervalos de valores no domínio
+ - Conjuntos de valores discretos
+  
+Ex.: Atributo *Preço do Produto*: Valor Monetário
+
+ - Valor permitido:
+   - 25,33
+ - Valores não permitidos:
+   - 25 Reais e 33 centavos
+   - -32,33
+
+# **Integridade Referencial**
+
+Uma restrição de Integridade Referencial assegura que valores de uma coluna em uma tabela são válidos baseados nos valores em outra tabela relacionada.
+
+Ex.: Se um produto de ID 523 foi cadastrado em uma tabela de Vendas, então um produto com ID 523 deve existir na tabela de Produtos relacionada.
+
+Atributo *Nome_Produto*: Caracteres
+ - Valores permitidos (produtos cadastrados):
+   - Água
+   - Refrigerante
+   - Suco
+ - Valores não permitidos para venda (não existentes na tabela de produtos):
+   - Cerveja
+  
+![alt text](Assets/imagem_Integridade_atualizacao_exclusao.jpg)
+
+# **Integridade Referencial - Atualização e Exclusão**
+
+Se um registro for excluído em uma tabela, então os registros relacionados em outras tabelas que o referenciam talvez precisem ser excluídos.
+Caso contrário ocorrerá erro.
+O mesmo se dá com atualização de registros.
+
+# **Integridade de Vazio**
+
+Este tipo de integridade informa se a coluna é obrigatória ou opcional - ou seja, se é possível não inserir um valor na coluna.
+Uma coluna de chave primária, por exemplo, sempre deve ter dados inseridos, e nunca pode estar vazia, para nenhum registro.
+
+# **Valores Nulos (NULL)**
+
+Um valor NULL significa que não exeistem dados.
+É diferente de zero, espaço, string vazia ou tabulação.
+Os nulos podem ser problemáticos, pois indicam:
+ - O valor da coluna não é apropriado;
+ - O valor não foi inserido;
+ - O valor é desconhecido.
+  
+Ex.: Suponha uma tabela de cadastro de alunos.
+Todo aluno deverá ter um nome cadastrado, de modo que esse campo é obrigatório (atributo não-nulo)
+Nem todo aluno possui telefone, portanto esse campo não é obigatório (atributo nulo), permite que deixe esse campo sem nada, o campo fica vazio, desde que seja previsto na modelagem.
+
+
+
 
 
 
