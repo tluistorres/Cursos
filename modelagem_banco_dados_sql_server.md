@@ -1,3 +1,7 @@
+# **Modelagem de Ddos**
+
+![alt text](Assets/image_modelagem_dados.png)
+
 # **Dados x Informações**
 
 Dados: São fatos em uma forma primária, que podem ser armazenados em algum meio.
