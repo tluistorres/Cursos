@@ -741,7 +741,7 @@ A notação de Peter Chen para DER utiliza retângulos para representar Entidade
 
 ![alt text](Assets/imagem_dicionario_dados_exemplo.png)
 
-![alt text](AAssets/imagem_dicionario_dados_exemplo2.png)
+![alt text](Assets/imagem_dicionario_dados_exemplo2.png)
 
 ![alt text](Assets/imagem_dicionario_tabela_editora.png)
 
@@ -750,6 +750,21 @@ A notação de Peter Chen para DER utiliza retângulos para representar Entidade
 # **Dependências**
 
 # **Dependência Funcional**
+
+
+_______________________________________________________________________________________________________________________
+
+# **Regra Codd 12: Regra de Não-Subversão**
+
+Se um objeto relacional tiver uma linguagem de baixo nível(registro único por vez), esse baixo nível não pode ser usado para subverter ou contornar as regras e restrições de integridade expressas na linguagem relacional de nível superior (múltiplos registros por vez).
+ - Se a interface do sistema fornece acesso a registros de baixo nível, então a interfae não deve ser capaz de danificar o sistema e contornar restrições de segurança e integridade.
+
+# **Conclusão**
+
+Se um sistema de gerenciamento de banco de dados segue essas regras, ele será considerado um banco de dados relacional verdadeiro.
+Atualmente essas regras podem ser complementadas pelo Terceiro Manifesto, de CJ Date e Hugh Darwen. 
+Acesso: http://thethirdmanifesto.com .
+
 
 
 
