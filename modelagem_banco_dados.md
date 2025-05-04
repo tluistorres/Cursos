@@ -751,10 +751,115 @@ A notação de Peter Chen para DER utiliza retângulos para representar Entidade
 
 # **Dependência Funcional**
 
+Seja E uma entidade, e X e Y dois atributos quaisquer de E. Dizemos que Y é funcionalmente dependente de X se e somente se cada valor de X tiver associado a ele exatamente um valor de Y.
+Simbolicamente: 
 
-_______________________________________________________________________________________________________________________
+                          **X ---> Y**
 
-# **Regra Codd 12: Regra de Não-Subversão**
+Que lemos com "X determina funcionalmente Y"
+
+# **Depend~encia Funcional**
+
+Ex.: O prazo de entrega de um pedido depende do número do pedido considerado:
+
+     **Numero_Pedido ------------> Prazo_Entrega_Pedido**
+
+O atributo que determina o valor é chamado de *Determinate*.
+O outro atributo é chamado de *Dependente*
+Uma chave primária em uma relação determina funcionalmente todos os outros atributos não-chave na linha.
+
+# **Dependência Funcional Total**
+
+Em uma relação com uma PK composta, um atributo não-chave que dependa dessa PK como um todo, e não somente de parte dela, é dito como posssuindo Dependência Funcional Total.
+
+# **Dependência Funcional Total - Exemplo**
+
+![alt text](Assets/img_dependencia_funcional_total.jpg)
+
+Aqui, Quant_Produto depende tanto de Num-Pedido quanto de Cod_  p roduto, ao mesmo tempo.
+
+# ** Dependência Funcional Parcial**
+
+Uma dependência funcional é parcial quando os atributos não-chave não dependem funcionalmente de toda a PK quando esta for composta.
+Ou seja, existe uma dependência funcional, mas somente de uma parte da chave primária.
+
+![alt text](Assets/img_dependencia_funcional_parcial.jpg)
+
+# Dependência Funcional Transitiva**
+
+Ocorre quando um campo não depende diretamente da chave primária da tabela ( nem mesmo parcialmente), mas depende de um outro campo não-chave.
+
+![alt text](Assets/img_dependencia_funcional_transitiva.jpg)
+
+*O Nome_Vendedor provavelmente deverá sair desta tabela.*
+
+# **Dependência Multivalorada**
+
+Ocorre quando, para cada valor de um atributo A, existe um conjunto de valores para outros atributos B e C que estão associados a ele, mas não independente entre si.
+Representamos a dependência multivalorada assim:
+                            
+                             A ->> B
+
+Onde B é a coluna que depende de A.
+
+![alt text](Assets/img_dependencia_multivalorada.jpg)
+
+# **Anomalias de Atualização**
+
+ - Anomalias são problemas que ocorrem em banco de dados mal planejados e não-normalizaddos, geralmente ocorrendo por excesso de dados armazenados em uma mesma tabela.
+ - São causadas pelas dependências parciais e trnsitivas.
+ - As anomalias de atualização são classificadas em anomalias de inserção, de exclusão e de modificação.
+
+# **Anomalia de Inclusão**
+
+Anomalia de Inclusão: não deve ser possível adicionar um dado a não ser que outro dado esteja disponível.
+Por exemplo, não deve ser permitido cadastrar um novo livro sem que um autor já esteja cadastrado.
+
+# **Anomalia de Exclusão**
+
+Anomalia de Exxlusão: ao excluirmos um registro, dados referentes em outra tabela são excluídos. Por exemplo, se excluirmos um autor, os livros desse autor devem ser excluídos também.
+
+# **Anomalia de Modificação**
+
+Anomalia de Modificação: ao alterar um dado em uma tabela, dados em outras tabelas precisam ser alterados.
+Por exemplo, se o código de um autor for modificado, esse código deve ser modificado na tabela de autores e na tabela de livros também, para manter o relacionamento entre livros e seus autores corretos.
+
+# **Eliminar Anomalias**
+
+Projetar os esquemas de relações (tabelas) no banco de dados de modo que nenhuma anomalia de inserção, exclusão ou modificação esteja presente nas relações.
+Para isso, usamos o processo de *Normalização*.
+
+# **Normalização**
+
+Normalização consiste em um processo de análise de uma relação para assegurar que seja *bem formada*.
+Decompor relações com anomalias para produzir relações menores e bem-estruturadas.
+Ou seja, em uma relação normalizada podemos inserir, excluir ou modificar registros sem criar anomalias.
+
+ - O processo de normalização, proposto por Codd em 1972, aplica a um esquema de relação uma série de testes para certificar que ele satisfaça uma *Forma Normal* (FN)
+ - Codd propôs originalmente 3 formas normais: 1ª, 2ª e 3ª FNs.
+ - Posteriormente, a 3ªFN foi revisada e uma definição mais robusta foi proposta por Boyce e Codd, denominada Forma Normal BOYCE-cDD (FNBC).
+
+# **Objetivos d Normalização**
+
+Analisar esquemas de relação (tabelas) com base em suas dependências funcionais e chaves primárias para:
+
+  1. Minimizar redundâncias
+  2. Minimizar anomalias de inserção, exclusão e modificação
+   
+As relações são decompostas em esquemas de relação menores que atendem aos testes de forma norma.
+
+# ** Objetivos da Normalização**
+
+O ideal é que o projeto do banco de dados relacional alcance a FNBC ou a 3FN para cada tabela.
+Não é adequado normalizar apenas até a 1FN ou à 2FN, pois na verdade essas formas normais são usadas para se chegar à 3FN ou FNBC.
+
+# **Primeira Forma Normal**
+
+
+
+
+
+_____________________________________________________________________________________________________________________
 
 Se um objeto relacional tiver uma linguagem de baixo nível(registro único por vez), esse baixo nível não pode ser usado para subverter ou contornar as regras e restrições de integridade expressas na linguagem relacional de nível superior (múltiplos registros por vez).
  - Se a interface do sistema fornece acesso a registros de baixo nível, então a interfae não deve ser capaz de danificar o sistema e contornar restrições de segurança e integridade.
