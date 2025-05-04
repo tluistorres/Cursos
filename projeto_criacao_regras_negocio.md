@@ -131,35 +131,30 @@ sis4.com/brmodelo/
 
 ![alt text](Assets/img_atributos_professor.jpg)
 
-# **Atributos da Entidade Departamento**
 
 ![alt text](Assets/img_atributos_entidade_departamento.jpg)
 
-# **Atributos da Entidade Curso**
 
-![alt text](Assets/img_relacionamentos_entidade_curso.jpg)
+![alt text](Assets/img_relacionamento_entidade_curso.jpg)
+
 
 ![alt text](Assets/img_atributo_entidade_curso.jpg)
 
-# **Atributos da Entidade Aluno**
 
 ![alt text](Assets/img_relaci_entidade_aluno.jpg)
 
 ![alt text](Assets/img_atributo_entidade_aluno.jpg)
 
-# **Atributos da Entidade Disciplina**
 
 ![alt text](Assets/img_realicion_entidade_disciplina.jpg)
 
 ![alt text](Assets/img_atributo_entidade_disciplina.jpg)
 
-# **Atributos da Entidade Turma**
+![alt text](Assets/img_entidade_atributo_historico_turma.jpg)
 
-![alt text](Assets/img_atributo_historici_turma.jpg)
+![alt text](Assets/img_relacion_historico_turma.jpg)
 
-![alt text](Assets/Assets/img_relacion_historico_turma.jpg)
-
-![alt text](AAssets/img_entidade_atributo_historico_turma.jpg)
+![alt text](Assets/img_entidade_atributo_historico_turma.jpg)
 
 
 # **DER Cardinalidades**
