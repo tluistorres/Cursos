@@ -895,7 +895,7 @@ Uma tabela está na 1ª forma normal quando:
 
 ![alt text](Assets/img_normalizando_2FN.jpg)
 
-![alt text](AAssets/img_normalizada_2FN.jpg)
+![alt text](Assets/img_normalizada_2FN.jpg)
 
 # **Terceira Forma Normal**
 
@@ -918,7 +918,7 @@ Esse atributo será a PK na nova relação
 Move-se então todos os atributos que não são dependentes funcionalmente do atributo chave para nova tabela
 O atributo (PK na nova relação) fica também na tabela original, e servirá como  uma chave estrangeira para associar as duas relações.
 
-![alt text](Assets/img_normalizando_3FN.jpg)
+![alt text](Assets/img_normalizando3FN.jpg)
 
 ![alt text](Assets/img_normalizada_3FN.jpg)
 
