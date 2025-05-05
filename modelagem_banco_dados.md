@@ -754,15 +754,15 @@ A notação de Peter Chen para DER utiliza retângulos para representar Entidade
 Seja E uma entidade, e X e Y dois atributos quaisquer de E. Dizemos que Y é funcionalmente dependente de X se e somente se cada valor de X tiver associado a ele exatamente um valor de Y.
 Simbolicamente: 
 
-                          **X ---> Y**
+                          X ---> Y
 
 Que lemos com "X determina funcionalmente Y"
 
-# **Depend~encia Funcional**
+# **Dependência Funcional**
 
 Ex.: O prazo de entrega de um pedido depende do número do pedido considerado:
 
-     **Numero_Pedido ------------> Prazo_Entrega_Pedido**
+      Numero_Pedido ------------> Prazo_Entrega_Pedido    
 
 O atributo que determina o valor é chamado de *Determinate*.
 O outro atributo é chamado de *Dependente*
@@ -778,14 +778,14 @@ Em uma relação com uma PK composta, um atributo não-chave que dependa dessa P
 
 Aqui, Quant_Produto depende tanto de Num-Pedido quanto de Cod_  p roduto, ao mesmo tempo.
 
-# ** Dependência Funcional Parcial**
+# **Dependência Funcional Parcial**
 
 Uma dependência funcional é parcial quando os atributos não-chave não dependem funcionalmente de toda a PK quando esta for composta.
 Ou seja, existe uma dependência funcional, mas somente de uma parte da chave primária.
 
 ![alt text](Assets/img_dependencia_funcional_parcial.jpg)
 
-# Dependência Funcional Transitiva**
+# **Dependência Funcional Transitiva**
 
 Ocorre quando um campo não depende diretamente da chave primária da tabela ( nem mesmo parcialmente), mas depende de um outro campo não-chave.
 
@@ -839,7 +839,7 @@ Ou seja, em uma relação normalizada podemos inserir, excluir ou modificar regi
  - Codd propôs originalmente 3 formas normais: 1ª, 2ª e 3ª FNs.
  - Posteriormente, a 3ªFN foi revisada e uma definição mais robusta foi proposta por Boyce e Codd, denominada Forma Normal BOYCE-cDD (FNBC).
 
-# **Objetivos d Normalização**
+# **Objetivos da Normalização**
 
 Analisar esquemas de relação (tabelas) com base em suas dependências funcionais e chaves primárias para:
 
@@ -848,15 +848,127 @@ Analisar esquemas de relação (tabelas) com base em suas dependências funciona
    
 As relações são decompostas em esquemas de relação menores que atendem aos testes de forma norma.
 
-# ** Objetivos da Normalização**
+# **Objetivos da Normalização**
 
 O ideal é que o projeto do banco de dados relacional alcance a FNBC ou a 3FN para cada tabela.
 Não é adequado normalizar apenas até a 1FN ou à 2FN, pois na verdade essas formas normais são usadas para se chegar à 3FN ou FNBC.
 
 # **Primeira Forma Normal**
 
+Definida historicamente para reprovar atributos multivalorados, compostos e suas combinações.
+O domínio de um atributo deve incluir apenas valores atômicos (indivisíveis), e o valor de qualquer atributo em uma tupla deve ser único valor do domínio desse atributo.
+Uma tabela está na 1ª forma normal quando:
+ - Somente possui valores atômicos
+ - Não há grupos de atributos repetidos (há apenas um dado por coluna nas linhas)
+ - Existe uma chave primária
+ - Relação não possui atributos multivalorados ou relações aninhadas ( tabelas dentro de tabelas)
+ - Uma tabela está na 1ª forma normal se somente  houverem valores atômicos no domínio de seus atributos
+ - Um valor atômico é indivisível
+ - Como exemplo, um campo de Endereço possui subdomínios Rua, Número e CEP. Esses itens devem ser separados no processo e normalização
+ - Cada informação deve ser colocada em um capmo diferente.
 
+# **Dados Atômicos**
 
+ - Elementos de dados que representam o nível mais baixo de detalhamento
+ - Então, campos não-atômicos são aqueles que podem ser subdivididos em mais um campo, pois eles escondem detalhes, como por exemplo o nome de uma pessoa, que contém o primeiro nome e o sobrenome.
+
+![alt text](Assets/img_normalizando_1FN.jpg)
+
+![alt text](Assets/img_normalizada_1FN.jpg)
+
+# **Segunda Forma Normal**
+
+ - Baseada no conceito de Dependência Funcional Total
+ - Um esquema de relação R está na 2FN se cada atributo não-chave de R for total e funcionalmente dependente da PK de R
+ - Para testar a 2FN, testamos as dependências funcionais cujos atributos fazem parte da chave primária
+ - Caso a PK tenha um único atributo, esse teste precisa ser aplicado
+ - Uma tabela está na 2ª FN se:
+   - Está na 1ªFN
+   - Todos os atributos não-chave são funcionalmente dependentes de *todas as partes* da chave primária
+   - Não existem dependências parciais
+   - Caso contrário, deve-se gerar uma nova tabela com os dados.
+   *Um atributo-chave é um que é uma PK ou parte de uma PK composta.
+
+  Deve-se criar uma nova relação para cada PK ou combinação de atributos que forem *determinantes em uma dependência funcional*.
+  Esse atributo será a PK na nova tabela
+  Mova os atributos não-chave dependentes desta PK para a nova tabela.
+
+![alt text](Assets/img_normalizando_2FN.jpg)
+
+![alt text](AAssets/img_normalizada_2FN.jpg)
+
+# **Terceira Forma Normal**
+
+ - Baseada no conceito de Dependência Transitiva
+ - A relação não deve ter atributo não-chave determinado funcionalmente por outro atributo não-chave ( ou csonjunto)
+ - Não deve existir dependência transitiva de um atributo não-chave sobre a PK
+ - Deve-se decompor e montar uma nova relação que inclua os atributos não-chave que determinam funcionalmente outros atributos não-chave.
+
+# **Terceira Forma Normal**
+
+Uma tabela está na 3FN se:
+
+ - Estiver na 2FN
+ - Não existirem *dependência transitivas* (é uma dependência funcional entre dois ou mais atributos que não sejam chaves)
+ - Uma tabela está na 3FN se ela estiver na 2FN e se nenhuma coluna não-chave depender de outra coluna não-chave.
+
+Uma dependência transitiva em uma tabela é uma dependência funcional entre dois ou mais atributos não-chave.
+Para cada atributo (ou grupo) não-chave que for um determinante na relação, cria-se uma nova tabela
+Esse atributo será a PK na nova relação
+Move-se então todos os atributos que não são dependentes funcionalmente do atributo chave para nova tabela
+O atributo (PK na nova relação) fica também na tabela original, e servirá como  uma chave estrangeira para associar as duas relações.
+
+![alt text](Assets/img_normalizando_3FN.jpg)
+
+![alt text](Assets/img_normalizada_3FN.jpg)
+
+# **Passo a passo da normalização**
+
+![alt text](Assets/img_normalizacao_passos.jpg)
+
+# **Forma Normal de Boyce-Codd**
+
+A definição origianl da 3FN de Codd não lidava adequadamente com uma relação que:
+ - Tivesse duas ou mais chaves candidatas
+ - Essas chaves candidatas fossem compostas
+ - Elas tivessem superposição (atributos em comum).
+
+Caso a combinação das condições acima não ocorra em uma tabela, basta aplicar a 3FN.
+
+Uma relação está em FNBC se e somente se os únicos determinantes são chaves candidatas.
+
+ - Cada relação na FNBC também está na  3FN, mas uma relação na 3FN não está necessariamente na FNBC (a maioria está)
+ - Quando uma tabela possui mais de uma chave candidata, podem ocorrer anomalias
+ - Na FNBC as chaves candidatas não possuem dependências parciais por outros atributos
+ - Uma relação R está na FNBC sempre que uma dependência FUNCIONAL NÃO-TRIVIAL  X --> A se mantivetr em R, assim X é uma superchave de R.
+
+# **FNBC - Pontos a considerar**
+
+Determinante: "lado esquerdo" de uma DF, como o X em X --> Y (Y é "dependente"); X determina funcionalmente Y.
+
+Dependência Funcional Trivial: dependência que não pode deixar de ser satisfeita. Uma DF é trivial se o lado direito da expressão é um subconjunto da do lado esquerdo.
+
+A --> B é uma DF trivial se B for um subconjunto de A.
+
+Exemplo:
+
+{ID_Func, Nome_Func} --> ID_Func é uma DF trivial porque ID_Func é um subconjunto de {ID_Func, Nome_Func}
+
+# **Forma Normal de Boyce-Codd**
+
+![alt text](Assets/img_forma_normalFNBC.jpg)
+
+# **FNBC - Normalizando**
+
+Para normalizar uma tabela até a FNBC devemos decompor a tabela com os passos a seguir:
+
+ - Encontrar uma dependência funcional não-trivial X --> Y  que viole a condição de FNBC ( X não deve ser uma superchave)
+ - Dividir a tabela em duas: uma co os atributos XY,ou seja, todos os atributos da depedência
+ - Outra com os atributos X juntamente com os atributos restantes da tabela original.
+
+# **Resolvendo o Problema**
+
+![alt text](Assets/img_resolvendo_normalizacaoFNBC.jpg)
 
 
 _____________________________________________________________________________________________________________________
