@@ -541,7 +541,7 @@ Ex.: Campos Num_Matrícula e CPF em uma tabela podem ter registros de alunos.
  - Um valor de uma chave estrangeira deve corresponder a um valor existente em uma chave primária associada ( ou valor de chave única). Caso contrário, deve ser nulo (NULL).
  - Uma chave estrangeira deve referenciar uma chave primária ou uma coluna de chave única.
 
-[text](Assets/imagem_chavePK_chaveFK.jpg)
+![alt text](Assets/imagem_chavePK_chaveFK.jpg)
 
 
 ![alt text](Assets/imagem_dominio.jpg)
@@ -968,10 +968,79 @@ Para normalizar uma tabela até a FNBC devemos decompor a tabela com os passos a
 
 # **Resolvendo o Problema**
 
-![alt text](Assets/img_resolvendo_normalizacaoFNBC.jpg)
+![alt text](Assets/img_resolvendo_problema.jpg)
+
+# **FNBC - Exemplo 2 (não normalizado)**
+
+![alt text](Assets/img_FNBCex2_normalizando.jpg)
+
+ - Se as informações de um aluno for atualizadas, deveremos atualizar também as informações sobre o orientador
+ - Disciplina é a parte de uma chave candidata composta e é determinado por um atributo não-chave da tabela.
+
+# **FNBC - Normalizado**
+
+![alt text](Assets/img_FNBC_normalizado.jpg)
+
+# **As 12 Regras de Codd para SGBDR**
+
+ - As doze regras de Codd são um conjunto de trze regras (enumeradas de zero a doze) publicada pelo cientista daa computação Edgar F. Codd na revista Computerworld em outubro de 1965.
+ - Seu inntuito é definir o que é necessário para que um sistema de gerenciamento de banco de dados possa ser considerado realmente relacional, ou seja, um SGBDR.
+ - Edgar Freank "Ted" Codd (19 de agosto de 1923 - 18 de abril de 2003) foi um cientista da computação inglês.
+ - Enquanto trabalhava para a IBM, inventou o midelo relacional para gerenciamento de banco de dados, a base teórica para banco de dados relacionais e sistemas de gerenciamento de banco de dados relacionais.
+ - Entidade e Relacionamento inventou o modelo Entidade e Relacionamento (Peter Chen).
+
+# **O porquê das 12 Regras de Codd**
+
+ - Conforme o modelo relacional se popularizou no início dos anos 1980, Codd iniciou uma campanha para evitar que o termo fosse mal utilizado por foenecedores de bancos de dados que apenas acrescentavam uma "pitada" de relacional à tecnologias antigas.
+ - Como parte desta campanha, ele publicou suas 12 regras para definir o que constuía um banco de dados relacional.
+ - Isso complicou sua posição na IBM, e ele estão saiu para formar uma empresa de consultoria com Christopher J. Date e outros.
+
+# **As 12 Regras de E.F Codd**
+
+# **Regra 0: a Regra fundamental**
+
+Para qualquer sistema anunciado como, ou que alega ser um sistema de gerenciamento de banco de dados relacional, esse sistema dfeve ser capaz de gerenciar bancos de dados inteiramente por meuio de suas capacidades relacionais.
+ - Todas as 12 regras são motivadas pela Regra Zero definida acima.
+
+# **Regra 1: a Regra da informação**
+
+Todas as informações em um banco de dados relacional são representadas explicitamente no nível lógico e exatamente de uma maneira - por valores em tabelas.
+
+ - Um banco de dados contém deversas informações, incluindo dados que os usuários acessam e também metadados, e essas informações devem ser armazenadas em cada célula de uma tabela na forma de intersecções entre linhas e colunas.
+
+# **Regra 2: Regra de acesso garantido**
+
+É garantido que todo e qualquer dado (valor atômico) em um banco de dados relacioanl seja logicamente acessível recorrendo a uma combinação de nome de tabela, valor de chave primária e nome de coluna.
+
+# **Regra 3: Tratamento sistemático de nulos**
+
+Valores nulos (distintos da sequência de caracteres vazio ou de uma sequência de caracteres em branco e distintos de zero ou qualquer outro número) são suportados em SGBDs totalmente relacionais para representar informações ausentes e informações inaplicáveis de forma sistemática, independente do tipo de dados.
+
+# **Regra 4: Regra do Catálogo on-line dinâmico**
+
+A dscrição do banco de dados é representada no nível lógico da mesma forma que os dados comuns, de modo que os usuários autorizados possam aplicar à sua interrogação a mesma linguagem relacional que aplicam aos dados regulares. São os metadados que devem ser gerenciados e armazenados como dados comuns, ou seja, em tabelas também dentro de bancos de dados, mas precisamente em catálago de bancos de dados, e esses dados devem estar autorizados para uma consulta padrão por uma liguagem que pode ser por exemplo o SQL.
+
+# **Regra 5: Sublinguagem Abragente de Dados**
+
+O sistema necessita suportar ao menos uma linguagem relaciona que:
+
+ 1. Possua uma sintaxe linear;
+ 2. Possa ser utilizada seja interativamente, seja por meio de programas;
+ 3. Suporte operações de definição de dados (incluindo definições de Visualizações);
+ 4. Suporte operações de manipulação de dados (atualização, bem como recuperação), de segurança e restrições de integridade, e transação; operações de gerenciamento (begin, commit e rollback).
+
+# **Regra 6: Atualizações de Visualizações**
+
+Todas as visões (tabelas de visualizações) que são teoricamente atualizáveis também são atualizáveis pelo sistema.
+ - "Atualização" inclui inserção e exclusão, bem como modificação.
+
+![alt text](Assets/img_canecaSQL.jpg)
+
+# **Regra 7: Inserção, Atualização, e exclusão de Alto nível**
 
 
-_____________________________________________________________________________________________________________________
+
+_____________________________________________________________________________________________________
 
 Se um objeto relacional tiver uma linguagem de baixo nível(registro único por vez), esse baixo nível não pode ser usado para subverter ou contornar as regras e restrições de integridade expressas na linguagem relacional de nível superior (múltiplos registros por vez).
  - Se a interface do sistema fornece acesso a registros de baixo nível, então a interfae não deve ser capaz de danificar o sistema e contornar restrições de segurança e integridade.

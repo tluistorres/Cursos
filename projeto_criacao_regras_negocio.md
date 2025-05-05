@@ -1,3 +1,5 @@
+![alt text](Assets/img_SQLcaneca.jpg)
+
 # **Apresentação**
 
 Banco de Dados para gerenciamento de uma Faculdade.
