@@ -1071,7 +1071,7 @@ A distribuição de partes do SBGD em várias localidades deve ser transparente 
   1. Quando uma versão distribuída do SBGD é introduzida pela primeira vez, e
   2. Quando dados distribuídos existentes são redistribuídos em outras localidades físicas.
 
-# **Regra de Não-Subversão**
+# **Regra 12: Regra de Não-Subversão**
 
 Se um sistema relacional tiver uma linguagem de baixo (registro único po vez), esse baixo nível não pode ser usado para subverter ou contornar as regras e restrinções de integridade expressas na linguagem relacional de nível superior (múltiplos registros por vez).
  - Se a interface do sistema fornece acesso a registros de baixo nível, então a interface não deve ser capaz de danificar o sistemas e controlar restrições de segurança e integridade.
