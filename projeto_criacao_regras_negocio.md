@@ -159,7 +159,7 @@ sis4.com/brmodelo/
 ![alt text](Assets/img_entidade_atributo_historico_turma.jpg)
 
 
-![alt text](Assets/img_relacion_historico_turma.jpg)
+![alt text](/Assets/img_relacion_historico_turma.jpg)
 
 
 ![alt text](Assets/img_entidade_atributo_historico_turma.jpg)
