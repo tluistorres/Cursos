@@ -106,7 +106,9 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
  - Um esquema no modelo hierárquico é um diagrama de estrutura em árvore.
  - O acesso aos dados é sempre unidirecsional, a partir do pai para o filho.
 
+
 ![alt text](Assets/imagem_hierárquico.jpg) 
+
 
 # **Modelo em Rede**
 
@@ -243,6 +245,7 @@ Neste nível, detalhes da implementação não aparecem, porém é suficientemen
 
 ![alt text](Assets/arquitetura_niveis.jpg)
 
+
 # **Esquema do Banco de Dados**
 
  - Um esquema é uma definição do Banco de Dados especificada durante o projeto, armazenada no *Dicionário de Dados*.
@@ -348,7 +351,9 @@ Ex.: Empregados, Livros, Vendas, Produtos.
 Uma instância em si é uma descrição da estrutura e formato das ocorrências da entidade, como uma "receita" ou "planta".
 Uma instância de entidade é uma ocorrência específica de uma entidade.
 
+
 ![alt text](Assets/instancia.png)
+
 
 # **Atributos**
 
@@ -408,7 +413,9 @@ As chaves podem ser únicas ou não-únicas:
 
 As chaves podem ser compostas, consistindo de dois ou mais atributos combinados.
   
+
 ![alt text](Assets/imagem_representacao.png)
+
 
 # **Exemplos de Representação de Entidades e Atributos**
 
@@ -438,13 +445,17 @@ Características de uma relação:
 
 # **Exemplo de uma Relação**
 
+
 ![alt text](Assets/imagem_relacao.jpg)
+
 
 "Toda Relação é uma tabela, mas nem toda tabela é uma relação"
 
 # **Relação - Exemplo completo**
 
+
 ![alt text](Assets/imagem_relacao2.jpg)
+
 
 # **Relacionamentos**
 
@@ -472,11 +483,15 @@ O grau de um relacionamento define o número de entidades que participam do rela
 
 # **Relacionamento Unário (Recursivo)**
 
+
 ![alt text](Assets/imagem_relacionamento_unário.jpg)
+
 
 # **Relacionamento Binário**
 
+
 ![alt text](Assets/imagem_relacionamento_binario.jpg)
+
 
 # **Relacionamento Ternário**
 
@@ -486,7 +501,9 @@ O grau de um relacionamento define o número de entidades que participam do rela
 
 Uma tabela é relacionada com outras tabelas. Por exemplo, um produto é vendido em uma loja.
 
+
 ![alt text](Assets/imagem_relacionamento_tabelas.jpg)
+
 
 O grau de um Relacionamento indica o número de entidades envolvidas no relacionamento, como ppor exemplo unário, binário e ternário.
 
@@ -541,10 +558,12 @@ Ex.: Campos Num_Matrícula e CPF em uma tabela podem ter registros de alunos.
  - Um valor de uma chave estrangeira deve corresponder a um valor existente em uma chave primária associada ( ou valor de chave única). Caso contrário, deve ser nulo (NULL).
  - Uma chave estrangeira deve referenciar uma chave primária ou uma coluna de chave única.
 
+
 ![alt text](Assets/imagem_chavePK_chaveFK.jpg)
 
 
 ![alt text](Assets/imagem_dominio.jpg)
+
 
 # **Cardinalidades**
 
@@ -556,7 +575,9 @@ Cardinalidade Mínima: número mínimo de instâncias de entidade que devem obri
 
 # **Simbologia para Cardinalidades**
 
+
 ![alt text](Assets/imagem_cardinalidade.jpg)
+
 
 # **Simbologia para Cardinalidade**
 
@@ -568,21 +589,28 @@ Cardinalidade Mínima: número mínimo de instâncias de entidade que devem obri
 
 ![alt text](Assets/imagem_cardinalidade_PeterChen.jpg)
 
+
 # **Relacionamento Binário um-para-um 1:1**
 
 Uma instância de entidade única em uma entidade está relacionada com uma instância de entidade única em outra entidade.
 
+
 ![alt text](Assets/imagem_relac_binário.jpg)
+
 
 # **Relacionamento Binário um-para-muitos 1:N**
 
 ![alt text](Assets/imagem_relac_um_para_muitos_PeterChen.jpg)
 
+
 ![alt text](Assets/imagem_relac_Binario_muitos_muitos.jpg)
+
 
 ![alt text](Assets/imagwm_real_binaria_n_n_Peter_Chen.jpg)
 
+
 ![alt text](Assets/imagem_desmebramento_n_n.jpg)
+
 
 # **Restrinções de integridade**
 
@@ -636,7 +664,9 @@ Atributo *Nome_Produto*: Caracteres
  - Valores não permitidos para venda (não existentes na tabela de produtos):
    - Cerveja
   
+
 ![alt text](Assets/imagem_integridade_atualizacao_exclusao.jpg)
+
 
 # **Integridade Referencial - Atualização e Exclusão**
 
@@ -695,7 +725,9 @@ As notações gráficas mais utilizadas em modelagem de dados são:
 
 # **Diagramação**
 
+
 ![alt text](Assets/imagem_ValoresNulos.jpg)
+
 
 # **Os mais comuns é utilizar o Diagrama de Peter Chen( utilizado nas escolas de forma acadêmica) ou Pé de Galinha(muito comum no mercado)**
 
@@ -737,15 +769,21 @@ A notação de Peter Chen para DER utiliza retângulos para representar Entidade
   
 ![alt text](Assets/imagem_dicionario_dados.png)
 
-![alt text](Assets/imagem_dicionario_dados_exemplo.png)
 
 ![alt text](Assets/imagem_dicionario_dados_exemplo.png)
+
+
+![alt text](Assets/imagem_dicionario_dados_exemplo.png)
+
 
 ![alt text](Assets/imagem_dicionario_dados_exemplo2.png)
 
+
 ![alt text](Assets/imagem_dicionario_tabela_editora.png)
 
+
 ![alt text](Assets/imagem_dicionario_relacionamento.jpg)
+
 
 # **Dependências**
 
@@ -774,7 +812,9 @@ Em uma relação com uma PK composta, um atributo não-chave que dependa dessa P
 
 # **Dependência Funcional Total - Exemplo**
 
+
 ![alt text](Assets/img_dependencia_funcional_total.jpg)
+
 
 Aqui, Quant_Produto depende tanto de Num-Pedido quanto de Cod_  p roduto, ao mesmo tempo.
 
@@ -783,13 +823,17 @@ Aqui, Quant_Produto depende tanto de Num-Pedido quanto de Cod_  p roduto, ao mes
 Uma dependência funcional é parcial quando os atributos não-chave não dependem funcionalmente de toda a PK quando esta for composta.
 Ou seja, existe uma dependência funcional, mas somente de uma parte da chave primária.
 
+
 ![alt text](Assets/img_dependencia_funcional_parcial.jpg)
+
 
 # **Dependência Funcional Transitiva**
 
 Ocorre quando um campo não depende diretamente da chave primária da tabela ( nem mesmo parcialmente), mas depende de um outro campo não-chave.
 
+
 ![alt text](Assets/img_dependencia_funcional_transitiva.jpg)
+
 
 *O Nome_Vendedor provavelmente deverá sair desta tabela.*
 
@@ -802,7 +846,9 @@ Representamos a dependência multivalorada assim:
 
 Onde B é a coluna que depende de A.
 
+
 ![alt text](Assets/img_dependencia_multivalorada.jpg)
+
 
 # **Anomalias de Atualização**
 
@@ -872,9 +918,12 @@ Uma tabela está na 1ª forma normal quando:
  - Elementos de dados que representam o nível mais baixo de detalhamento
  - Então, campos não-atômicos são aqueles que podem ser subdivididos em mais um campo, pois eles escondem detalhes, como por exemplo o nome de uma pessoa, que contém o primeiro nome e o sobrenome.
 
+
 ![alt text](Assets/img_normalizando_1FN.jpg)
 
+
 ![alt text](Assets/img_normalizada_1FN.jpg)
+
 
 # **Segunda Forma Normal**
 
@@ -893,9 +942,12 @@ Uma tabela está na 1ª forma normal quando:
   Esse atributo será a PK na nova tabela
   Mova os atributos não-chave dependentes desta PK para a nova tabela.
 
+
 ![alt text](Assets/img_normalizando_2FN.jpg)
 
+
 ![alt text](Assets/img_normalizada_2FN.jpg)
+
 
 # **Terceira Forma Normal**
 
@@ -920,11 +972,15 @@ O atributo (PK na nova relação) fica também na tabela original, e servirá co
 
 ![alt text](Assets/img_normalizando3FN.jpg)
 
+
 ![alt text](Assets/img_normalizada_3FN.jpg)
+
 
 # **Passo a passo da normalização**
 
+
 ![alt text](Assets/img_normalizacao_passos.jpg)
+
 
 # **Forma Normal de Boyce-Codd**
 
@@ -956,7 +1012,9 @@ Exemplo:
 
 # **Forma Normal de Boyce-Codd**
 
+
 ![alt text](Assets/img_forma_normalFNBC.jpg)
+
 
 # **FNBC - Normalizando**
 
@@ -968,18 +1026,24 @@ Para normalizar uma tabela até a FNBC devemos decompor a tabela com os passos a
 
 # **Resolvendo o Problema**
 
+
 ![alt text](Assets/img_resolvendo_problema.jpg)
+
 
 # **FNBC - Exemplo 2 (não normalizado)**
 
+
 ![alt text](Assets/img_FNBCex2_normalizando.jpg)
+
 
  - Se as informações de um aluno for atualizadas, deveremos atualizar também as informações sobre o orientador
  - Disciplina é a parte de uma chave candidata composta e é determinado por um atributo não-chave da tabela.
 
 # **FNBC - Normalizado**
 
+
 ![alt text](Assets/img_FNBC_normalizado.jpg)
+
 
 # **As 12 Regras de Codd para SGBDR**
 
@@ -1034,7 +1098,9 @@ O sistema necessita suportar ao menos uma linguagem relaciona que:
 Todas as visões (tabelas de visualizações) que são teoricamente atualizáveis também são atualizáveis pelo sistema.
  - "Atualização" inclui inserção e exclusão, bem como modificação.
 
+
 ![alt text](Assets/img_canecaSQL.jpg)
+
 
 # **Regra 7: Inserção, Atualização, e exclusão de Alto nível**
 
