@@ -83,7 +83,7 @@ Bancos de dados encontram aplicações em inúmeras áreas, como:
 
 A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e as aplicações que acessam os dados.
 
-![sistema de bancos de dados](./Assets/image_alura_db.jpg)
+![alt text](Assets/image_alura_db.jpg)
 
 # **Usuários de Bancos de Dados**
 
@@ -106,7 +106,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
  - Um esquema no modelo hierárquico é um diagrama de estrutura em árvore.
  - O acesso aos dados é sempre unidirecsional, a partir do pai para o filho.
 
-![Modelo Hierárquico de bancos de dados](./Assets/Imagem_hierárquico.jpg) 
+![alt text](Assets/imagem_hierárquico.jpg) 
 
 # **Modelo em Rede**
 
@@ -115,16 +115,16 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
  - Tanto o esquema quanto ocorrências de dados são visualizados como um grafo direcionado.
  - (Grafo -> Tipo de estrutura de dados).
 
-# **Mdelo em Rede**
+# **Modelo em Rede**
 
-![Modelo em Rede de bancos de dados](./Assets/imagem_rede.jpg)
+![alt text](Assets/imagem_rede.jpg)
 
 # **Modelo Relacional**
 
  - Neste modelo os dados são separados em entidades, conforme cada assunto, e registrados como atributos dessas entidades.
  - As entidades se relacionam entre si e permitem que os dados sejam armazenados e recuperados de forma rápida e segura.
 
-![Modelo Relacional de bancos de dados](Assets/imagem_relacional.jpg)
+![alt text](Assets/imagem_relacional.jpg)
 
 # **Introdução ao Modelo Relacional** 
 
@@ -225,7 +225,7 @@ Neste nível, detalhes da implementação não aparecem, porém é suficientemen
 
 # **Modelo Lógico**
 
-![Modelo Lógico de bancos de dados](./Assets/imagem_modelo_logico.jpg)
+![alt text](Assets/imagem_modelo_logico.jpg)
 
  - Um modelo lógico possui conceitos que os usuários são capazes de entender, ao mesmo tempo em que não está distante do modelo físico do banco de dados.
  - Neste nível o projeto é independente do SGBD.
@@ -233,7 +233,7 @@ Neste nível, detalhes da implementação não aparecem, porém é suficientemen
   
 # **Modelo Físico**
 
-![Modelo Físico de bancos de dados](./Assets/modelo_físico.jpg)
+![alt text](Assets/modelo_físico.jpg)
 
  - A partir de um modelo lógico nós derivamos o modelo físico, onde se detalham os componentes de estrutura física do banco de dados, incluindo as tabelas, campos, tipos de valores, restrições, etc.
  - Ao criarmos o modelo físico, poderemos partir para a implementação física do banco de dados, utilizando o SGBD mais adequado.
@@ -241,7 +241,7 @@ Neste nível, detalhes da implementação não aparecem, porém é suficientemen
 # **Arquitetura de Três Níveis**
 
 
-![Modelo arquitetura de bancos de dados](Assets/arquitetura_niveis.jpg)
+![alt text](Assets/arquitetura_niveis.jpg)
 
 # **Esquema do Banco de Dados**
 
@@ -317,7 +317,7 @@ Diagramas são criados para representar graficamente entidades, atributos e rela
 
 # **Exemplo de DER**
 
-!![Modelo DER de bancos de dados](Assets/imagem_DER.png)
+![alt text](Assets/imagem_DER.png)
 
 # **Entidade**
 
@@ -348,7 +348,7 @@ Ex.: Empregados, Livros, Vendas, Produtos.
 Uma instância em si é uma descrição da estrutura e formato das ocorrências da entidade, como uma "receita" ou "planta".
 Uma instância de entidade é uma ocorrência específica de uma entidade.
 
-![Modelo Iinstância de bancos de dados](Assets/instancia.png)
+![alt text](Assets/instancia.png)
 
 # **Atributos**
 
@@ -408,7 +408,7 @@ As chaves podem ser únicas ou não-únicas:
 
 As chaves podem ser compostas, consistindo de dois ou mais atributos combinados.
   
-![Exemplos de Representação de Entidades e Atributos](Assets/imagem_representacao.png)
+![alt text](Assets/imagem_representacao.png)
 
 # **Exemplos de Representação de Entidades e Atributos**
 
@@ -617,9 +617,9 @@ EX.: em uma coluna que armazena preços de mercadorias, os valores admitidos sã
 Ex.: Atributo *Preço do Produto*: Valor Monetário
 
  - Valor permitido:
-   - 25,33
+   -  25,33
  - Valores não permitidos:
-   - 25 Reais e 33 centavos
+   -  25 Reais e 33 centavos
    - -32,33
 
 # **Integridade Referencial**
@@ -636,7 +636,7 @@ Atributo *Nome_Produto*: Caracteres
  - Valores não permitidos para venda (não existentes na tabela de produtos):
    - Cerveja
   
-![alt text](Assets/imagem_Integridade_atualizacao_exclusao.jpg)
+![alt text](Assets/imagem_integridade_atualizacao_exclusao.jpg)
 
 # **Integridade Referencial - Atualização e Exclusão**
 
