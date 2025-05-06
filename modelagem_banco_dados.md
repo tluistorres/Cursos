@@ -1038,12 +1038,44 @@ Todas as visões (tabelas de visualizações) que são teoricamente atualizávei
 
 # **Regra 7: Inserção, Atualização, e exclusão de Alto nível**
 
+A capacidade de tratar uma relação base ou uma relação derivada como um único operando aplica-se não apenas à recuperação de dados, mas também à inserção, atualização e exclusão de dados.
 
+ - O sistema necessita fornecer suporte à configuração do nível de operações de insert, update, e delete.
 
-_____________________________________________________________________________________________________
+# **Regra 8: Independência Física dos dados**
 
-Se um objeto relacional tiver uma linguagem de baixo nível(registro único por vez), esse baixo nível não pode ser usado para subverter ou contornar as regras e restrições de integridade expressas na linguagem relacional de nível superior (múltiplos registros por vez).
- - Se a interface do sistema fornece acesso a registros de baixo nível, então a interfae não deve ser capaz de danificar o sistema e contornar restrições de segurança e integridade.
+Os programas aplicativos e as atividades do terminal permanecem logicamente inalterados sempre que qualquer alteração é feita nas representações de armazenamento ou nos métodos de acesso.
+
+ - Todos os dados armazenados em um banco de dados ou aplicativos devem ser fisicamente independentes ao acessar o banco de dados.
+ - Cada dado não deve depender de outros dados ou de uma aplicação.
+
+# **Regra 9: Independência Lógica dos Dados**
+
+Os programas aplicativos e as atividades de terminal permanecem logicamente intactos quando alterações de qualquer tipo que preservem informações e que teoricamente permitam a integridade são feitas nas tabelas base.
+
+ - Similar à independência física dos dados.
+ - Se ocorrer alguma alteração no nível lógico (estruturas de tabelas), isso não deverá afetar a visualização do usuário (aplicação).
+
+# **Regra 10: Independência da Integridade**
+
+As restrições de integridade específicas de um banco de dados relacional em particular devem ser definidas na sublinguagem de dados relacionais e armazenáveis no catálogo, e não nos programas aplicativos.
+
+ - Integridade de entidade: nenhum componente de uma chave primária pode ter valor.
+ - Integridade referencial: para cada valor de chave estrangeira não nulo distinto em um BD relacional, deve existir um valor de chave primária correspondente do mesmo domínio.
+
+# **Regra 11: Independência de Distribuição**
+
+Um SBGD relacional possui independência de distribuição.
+A distribuição de partes do SBGD em várias localidades deve ser transparente para os usuários do banco de dados. Aplicações existentes necessitam continuar a operar com sucesso.
+
+  1. Quando uma versão distribuída do SBGD é introduzida pela primeira vez, e
+  2. Quando dados distribuídos existentes são redistribuídos em outras localidades físicas.
+
+# **Regra de Não-Subversão**
+
+Se um sistema relacional tiver uma linguagem de baixo (registro único po vez), esse baixo nível não pode ser usado para subverter ou contornar as regras e restrinções de integridade expressas na linguagem relacional de nível superior (múltiplos registros por vez).
+ - Se a interface do sistema fornece acesso a registros de baixo nível, então a interface não deve ser capaz de danificar o sistemas e controlar restrições de segurança e integridade.
+
 
 # **Conclusão**
 
