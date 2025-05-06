@@ -21,7 +21,6 @@ Fases:
  - Implementação (Usando o MySQL)
  - Testes Básicos (Consultas)
 
-
 # **Regras de Negócio**
 
  - Um aluno só pode estar matriculado em um curso por vez
