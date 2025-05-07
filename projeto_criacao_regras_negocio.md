@@ -132,8 +132,6 @@ sis4.com/brmodelo/
 
 ![alt text](Assets/img_atributos_professor.jpg)
 
-![alt text](Assets/img_relaci_entidade_aluno.jpg)
-
 ![alt text](Assets/img_atributo_entidade_aluno.jpg)
 
 ![alt text](Assets/img_atributo_entidade_disciplina.jpg)
