@@ -104,7 +104,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
  - Neste modelo os dados são organizaddos de forma hierárquica, com conjuntos de tipos de registros interconectados por meio de ligações.
  - Uma ligação representa uma relação entre dois tipos de registros: pai e filho.
  - Um esquema no modelo hierárquico é um diagrama de estrutura em árvore.
- - O acesso aos dados é sempre unidirecsional, a partir do pai para o filho.
+ - O acesso aos dados é sempre unidirecional, a partir do pai para o filho.
 
 
 ![alt text](Assets/imagem_hierárquico.jpg) 
@@ -140,7 +140,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
 
  - Hierárquico
  - Rede
- - *Relacionla*
+ - *Relacional*
  - Orientado a Objetos
  - Não-Relacional
   
@@ -151,7 +151,7 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
 
 # **Modelo Relacional**
 
- - No modelo relacional os dados são organizados em coleções de tabelas bidimeensionais.
+ - No modelo relacional os dados são organizados em coleções de tabelas bidimensionais.
  - Essas tabelas são também chamadas de "Relações".
  - Relação é uma forma de se organizar os dados em linhas e colunas.
  - Baseado em lógica e teoria de conjuntos.
@@ -160,8 +160,8 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
 
 ### O modelo relacional é composto, basicamente por:
 
- - Coleções de objetos ou relações que armazenam os dados
- - Um conjunto de operadores que agem nas relações, produzindo outras relações
+ - Coleções de objetos ou relações que armazenam os dados.
+ - Um conjunto de operadores que agem nas relações, produzindo outras relações.
  - Integridade de dados, para precisão e consistência.
 
 # **Banco de Dados Relacional**
@@ -209,11 +209,11 @@ A figura a seguir ilustra a relação entre usuários, bancos de dados, SGBDs e 
 
 # **Modelagem de Dados - Níveis**
 
-## **Classificamos o processo de modelagem de dados em tr~es níveis**:
+## **Classificamos o processo de modelagem de dados em três níveis**:
 
  - Modelo Conceitual ( alto nível) - MCD -> Modelo Conceitual de Dados.
- - Modelo Lógico - MLD
- - Modelo Físico (baixo nível) - MFD
+ - Modelo Lógico - MLD.
+ - Modelo Físico (baixo nível) - MFD.
 
 # **Modelo Conceitual**
 
@@ -222,7 +222,7 @@ Neste nível o projeto é independente de SGBD.
 
 Exemplo: 
 **Cadastro de Produtos em uma Loja**
-Dados necessários: Nome do produto, categoria de produto (limpeza, higiene, etc), código do fornecedor, tipo de embaçlagem, tamanho, quantidade.
+Dados necessários: Nome do produto, categoria de produto (limpeza, higiene, etc), código do fornecedor, tipo de embalagem, tamanho, quantidade.
 Neste nível, detalhes da implementação não aparecem, porém é suficientemente detalhado para a ponto de ser possível descrever os tipos de dados requeridos, seus relacionamentos entre si e regras de consistência.
 
 # **Modelo Lógico**
@@ -257,25 +257,25 @@ Neste nível, detalhes da implementação não aparecem, porém é suficientemen
 
 As principais etapas no desenvolvimento de um DB são:
 
- - 1. Especificação e Análise de Requisitos
-      - Os requisitos são documentos
- - 2. Projeto Conceitual
-      - Baseados nos requisitos
- - 3. Projeto Lógico
-      - Expresso em um modelo de dados, como o relacional
- - 4. Projeto Físico
-      - Especificações para armazenar e acessar o banco de dados
+   1. Especificação e Análise de Requisitos:
+      - Os requisitos são documentos.
+   2. Projeto Conceitual:
+      - Baseados nos requisitos.
+   3. Projeto Lógico:
+      - Expresso em um modelo de dados, como o relacional.
+   4. Projeto Físico:
+      - Especificações para armazenar e acessar o banco de dados.
       - Implementação do DB, inserção do DB, inserção de dados reais e manutenção.
 
 # **Tarefas para Modelagem**
 
 As tarefas a seguir devem ser realizadas para que seja possível efetuar modelagem de dados e projeto de BD funcional:
 
- - Identificar os tiposs de entidade
- - Identificar atributos
- - Identificar relacionamentos
- - Criar e associar chaves
- - Normalizar para reduzir redundância
+ - Identificar os tipos de entidade.
+ - Identificar atributos.
+ - Identificar relacionamentos.
+ - Criar e associar chaves.
+ - Normalizar para reduzir redundância.
  - Desnormalizar para aumentar performance.
 
 # **MER**
@@ -283,9 +283,9 @@ As tarefas a seguir devem ser realizadas para que seja possível efetuar modelag
 Após o levantamento dos requisitos, estes são transformaddos em um **Modelo**
 **Entidade-Relacionamento (MER)**, o qual consiste dos seguintes elementos:
 
- - Entidades
- - Relacionamentos
- - Atributos
+ - Entidades.
+ - Relacionamentos.
+ - Atributos.
 
 O modelo é posteriormente refinado com o uso de técnicas específicas, e finalmente implementado em um banco de dados físico.
 
@@ -295,9 +295,9 @@ Também conhecido pela sigla MER, trata-se de um modelo conceitual usado para de
 O MER permite representar de forma abstrata a estrutura que irá constituir o banco de dados.
 É composto pelos seguintes objetos:
 
- - Entidades
- - Atributos
- - Relacionamentos
+ - Entidades.
+ - Atributos.
+ - Relacionamentos.
   
 # **MER**
 
@@ -313,9 +313,9 @@ Diagramas são criados para representar graficamente entidades, atributos e rela
 
 # **Componentes do DER**
 
- - Retângulos - Representam entidades
- - Elipse - Representam atributos
- - Losangos - representam relacionamentos
+ - Retângulos - Representam entidades.
+ - Elipse - Representam atributos.
+ - Losangos - representam relacionamentos.
  - Linhas - ligam atributos a entidades e entidades a relacionamentos.
 
 # **Exemplo de DER**
@@ -367,10 +367,10 @@ Uma instância de entidade é uma ocorrência específica de uma entidade.
 
 # **Tipos de Atributos**
 
- - Simples
- - Composto
- - Multivalorado
- - Determinante
+ - Simples.
+ - Composto.
+ - Multivalorado.
+ - Determinante.
  - Identificador entre outros.
 
 # **Atributos Simples / Atômico**
@@ -404,12 +404,12 @@ Ex.: CNPJ da empresa, Código de Produto.
 
 Uma *chave* identifica uma instância específica na classe de entiodade.
 
-Ex.: CPF, CódigoProduto, Matrícula, ID_Setor
+Ex.: CPF, CódigoProduto, Matrícula, ID_Setor.
 
 As chaves podem ser únicas ou não-únicas:
 
- - Únicas: o valor dos dados da chave é único na entidade
- - NãO-única: usada para agrupar instâncias de classe em categorias.
+ - Únicas: o valor dos dados da chave é único na entidade.
+ - Não-única: usada para agrupar instâncias de classe em categorias.
 
 As chaves podem ser compostas, consistindo de dois ou mais atributos combinados.
   
@@ -435,12 +435,12 @@ Tabela bidimensional com características específicas, compostas por linhas e c
 
 Características de uma relação:
 
- - Linhas contém dados sobre instâncias de uma entidade (registros)
- - Colunas contém dados sobre atributos da entidade (campos)
- - Cada célula da tabela armazena um único valor
- - Todos os valores em uma coluna são do mesmo tipo (domínio)
- - Cada coluna posui um nome único
- - Não há duas linhas idênticas
+ - Linhas contém dados sobre instâncias de uma entidade (registros).
+ - Colunas contém dados sobre atributos da entidade (campos).
+ - Cada célula da tabela armazena um único valor.
+ - Todos os valores em uma coluna são do mesmo tipo (domínio).
+ - Cada coluna posui um nome único.
+ - Não há duas linhas idênticas.
  - As relações geralmente geram tabelas no banco.
 
 # **Exemplo de uma Relação**
@@ -459,12 +459,12 @@ Características de uma relação:
 
 # **Relacionamentos**
 
- - As Entidades podem ser conectadas entre si por meio de Relacionamentos
+ - As Entidades podem ser conectadas entre si por meio de Relacionamentos.
  - Trata-se de uma estrutura que indica a associação de elementos de uma ou mais entidades.
 
-# **Porque precisamos de realacionamentos?**
+# **Porque precisamos de relacionamentos ?**
 
- - Como os dados de diferentes entidades são armazenados em tabelas distintas, geralmente precisamos combinar duas ou mais tabelas para responder às perguntas específicas dos usuários
+ - Como os dados de diferentes entidades são armazenados em tabelas distintas, geralmente precisamos combinar duas ou mais tabelas para responder às perguntas específicas dos usuários.
  - Por exemplo, podemos querer saber quais produtos, e em qual quantidade, foram adquiridos por um cliente em particular. Precisaremos então de dados das tabelas de clientes, de pedidos e produtos para obter essa informação.
 
 # **Representando Relacionamentos**
@@ -475,9 +475,9 @@ Características de uma relação:
 
 O grau de um relacionamento define o número de entidades que participam do relacionamento. Assim, um relacionamento pode ser:
 
- - Unário
- - Binário
- - Ternário
+ - Unário.
+ - Binário.
+ - Ternário.
   
 # ***Os relacionamentos mais comuns são os de grau (Binário)***
 
@@ -569,7 +569,10 @@ Ex.: Campos Num_Matrícula e CPF em uma tabela podem ter registros de alunos.
 
 A cardinalidade diz respeito ao número de itens que se relacionam nas entidades.
 A cardinalidade pode ser máxima ou mínima, significando respectivanmente os números mínimo e máximo de instâncias de cada entidade associadas no relacionamento.
-Cardinalidade Máxima: trata-se do número máximo de instâncias de entidades que podem participar em um relacionamento. Pode ser 1 ou N (muitos).
+
+Cardinalidade Máxima: trata-se do número máximo de instâncias de entidades que podem participar em um relacionamento. 
+
+Pode ser 1 ou N (muitos).
 
 Cardinalidade Mínima: número mínimo de instâncias de entidade que devem obrigatoriamente participar em um relacionamento; zero é participação opcional e um é obrigatória.
 
@@ -622,11 +625,11 @@ A integridade é atingida por meio da aplicação de *Restrições de Integridad
 
 # **Restrições de Integridade**
 
- - Integridade Referencial
- - Integridade de Domínio
- - Integridade de Vazio
- - Integridade de Chaves
- - Integridade Definida pelo Usuário
+ - Integridade Referencial.
+ - Integridade de Domínio.
+ - Integridade de Vazio.
+ - Integridade de Chaves.
+ - Integridade Definida pelo Usuário.
   
 # **Integridade de Domínio**
 
@@ -636,11 +639,11 @@ EX.: em uma coluna que armazena preços de mercadorias, os valores admitidos sã
 
 # **Integridade de Domínio - Fatores**
 
- - Tipo de Dado do campo
- - Representação interna do tipo de dado
- - Presença ou não do Dado
- - Intervalos de valores no domínio
- - Conjuntos de valores discretos
+ - Tipo de Dado do campo.
+ - Representação interna do tipo de dado.
+ - Presença ou não do Dado.
+ - Intervalos de valores no domínio.
+ - Conjuntos de valores discretos.
   
 Ex.: Atributo *Preço do Produto*: Valor Monetário
 
@@ -707,8 +710,6 @@ Por exemplo, pode-se definir que uma coluna somente aceitará um conjunto restri
 
 # **Notações Gráficas e Diagramação**
 
-# **Diagramação**
-
  - O Diagrama Entidade Relacionamento é a representação gráfica de um MER, que é um modelo conceitual.
  - O uso de um diagrama facilita a modelagem e a comunicação entre os membros da equipe de desenvolvimento, permitindo que todos falem a mesma "língua" durante o processo.
  - A notação original do DER foi proposta por Peter Chen.
@@ -729,11 +730,11 @@ As notações gráficas mais utilizadas em modelagem de dados são:
 ![alt text](Assets/imagem_ValoresNulos.jpg)
 
 
-# **Os mais comuns é utilizar o Diagrama de Peter Chen( utilizado nas escolas de forma acadêmica) ou Pé de Galinha(muito comum no mercado)**
+Os mais comuns é utilizar o Diagrama de Peter Chen( utilizado nas escolas de forma acadêmica) ou Pé de Galinha(muito comum no mercado).
 
 # **Softwares para Diagramação**
 
-Ferramentas CASE
+Ferramentas CASE:
 
  - Astah
  - Lucidchart
@@ -763,7 +764,7 @@ A notação de Peter Chen para DER utiliza retângulos para representar Entidade
 
 # **Dicionário de Dados**
 
- - Um dicionário de dados é um documento usdo para armazenar informações sobre o conteíúdo, formato e a estrutura de um banco de dados, assim como os relacionamentos entre os seus elementos.
+ - Um dicionário de dados é um documento usado para armazenar informações sobre o conteúdo, formato e a estrutura de um banco de dados, assim como os relacionamentos entre os seus elementos.
  - É importante manter um dicionário de dados para limitar erros ao criar a estrutura física do banco de dados no computador.
  - Também chamado de "Repositório de Metadados"
   
@@ -787,20 +788,20 @@ A notação de Peter Chen para DER utiliza retângulos para representar Entidade
 
 # **Dependências**
 
-# **Dependência Funcional**
+Dependência Funcional:
 
 Seja E uma entidade, e X e Y dois atributos quaisquer de E. Dizemos que Y é funcionalmente dependente de X se e somente se cada valor de X tiver associado a ele exatamente um valor de Y.
 Simbolicamente: 
 
-                          X ---> Y
+   X ---> Y
 
-Que lemos com "X determina funcionalmente Y"
+Que lemos com "X determina funcionalmente Y".
 
 # **Dependência Funcional**
 
 Ex.: O prazo de entrega de um pedido depende do número do pedido considerado:
 
-      Numero_Pedido ------------> Prazo_Entrega_Pedido    
+   Num_Pedido -------> Prazo_Entrega_Pedido    
 
 O atributo que determina o valor é chamado de *Determinate*.
 O outro atributo é chamado de *Dependente*
@@ -816,7 +817,7 @@ Em uma relação com uma PK composta, um atributo não-chave que dependa dessa P
 ![alt text](Assets/img_dependencia_funcional_total.jpg)
 
 
-Aqui, Quant_Produto depende tanto de Num-Pedido quanto de Cod_  p roduto, ao mesmo tempo.
+Aqui, Quant_Produto depende tanto de Num_Pedido quanto de Cod_  produto, ao mesmo tempo.
 
 # **Dependência Funcional Parcial**
 
@@ -842,7 +843,7 @@ Ocorre quando um campo não depende diretamente da chave primária da tabela ( n
 Ocorre quando, para cada valor de um atributo A, existe um conjunto de valores para outros atributos B e C que estão associados a ele, mas não independente entre si.
 Representamos a dependência multivalorada assim:
                             
-                             A ->> B
+  A ->> B
 
 Onde B é a coluna que depende de A.
 
@@ -852,7 +853,7 @@ Onde B é a coluna que depende de A.
 
 # **Anomalias de Atualização**
 
- - Anomalias são problemas que ocorrem em banco de dados mal planejados e não-normalizaddos, geralmente ocorrendo por excesso de dados armazenados em uma mesma tabela.
+ - Anomalias são problemas que ocorrem em banco de dados mal planejados e não-normalizados, geralmente ocorrendo por excesso de dados armazenados em uma mesma tabela.
  - São causadas pelas dependências parciais e trnsitivas.
  - As anomalias de atualização são classificadas em anomalias de inserção, de exclusão e de modificação.
 
@@ -863,7 +864,7 @@ Por exemplo, não deve ser permitido cadastrar um novo livro sem que um autor j�
 
 # **Anomalia de Exclusão**
 
-Anomalia de Exxlusão: ao excluirmos um registro, dados referentes em outra tabela são excluídos. Por exemplo, se excluirmos um autor, os livros desse autor devem ser excluídos também.
+Anomalia de Exlusão: ao excluirmos um registro, dados referentes em outra tabela são excluídos. Por exemplo, se excluirmos um autor, os livros desse autor devem ser excluídos também.
 
 # **Anomalia de Modificação**
 
@@ -889,10 +890,10 @@ Ou seja, em uma relação normalizada podemos inserir, excluir ou modificar regi
 
 Analisar esquemas de relação (tabelas) com base em suas dependências funcionais e chaves primárias para:
 
-  1. Minimizar redundâncias
-  2. Minimizar anomalias de inserção, exclusão e modificação
+  1. Minimizar redundâncias.
+  2. Minimizar anomalias de inserção, exclusão e modificação.
    
-As relações são decompostas em esquemas de relação menores que atendem aos testes de forma norma.
+As relações são decompostas em esquemas de relação menores que atendem aos testes de forma normalizada.
 
 # **Objetivos da Normalização**
 
@@ -904,13 +905,13 @@ Não é adequado normalizar apenas até a 1FN ou à 2FN, pois na verdade essas f
 Definida historicamente para reprovar atributos multivalorados, compostos e suas combinações.
 O domínio de um atributo deve incluir apenas valores atômicos (indivisíveis), e o valor de qualquer atributo em uma tupla deve ser único valor do domínio desse atributo.
 Uma tabela está na 1ª forma normal quando:
- - Somente possui valores atômicos
- - Não há grupos de atributos repetidos (há apenas um dado por coluna nas linhas)
- - Existe uma chave primária
- - Relação não possui atributos multivalorados ou relações aninhadas ( tabelas dentro de tabelas)
- - Uma tabela está na 1ª forma normal se somente  houverem valores atômicos no domínio de seus atributos
- - Um valor atômico é indivisível
- - Como exemplo, um campo de Endereço possui subdomínios Rua, Número e CEP. Esses itens devem ser separados no processo e normalização
+ - Somente possui valores atômicos.
+ - Não há grupos de atributos repetidos (há apenas um dado por coluna nas linhas).
+ - Existe uma chave primária.
+ - Relação não possui atributos multivalorados ou relações aninhadas ( tabelas dentro de tabelas).
+ - Uma tabela está na 1ª forma normal se somente houverem valores atômicos no domínio de seus atributos.
+ - Um valor atômico é indivisível.
+ - Como exemplo, um campo de Endereço possui subdomínios: Rua, Número e CEP. Esses itens devem ser separados no processo e normalização.
  - Cada informação deve ser colocada em um capmo diferente.
 
 # **Dados Atômicos**
@@ -927,19 +928,20 @@ Uma tabela está na 1ª forma normal quando:
 
 # **Segunda Forma Normal**
 
- - Baseada no conceito de Dependência Funcional Total
- - Um esquema de relação R está na 2FN se cada atributo não-chave de R for total e funcionalmente dependente da PK de R
- - Para testar a 2FN, testamos as dependências funcionais cujos atributos fazem parte da chave primária
- - Caso a PK tenha um único atributo, esse teste precisa ser aplicado
+ - Baseada no conceito de Dependência Funcional Total.
+ - Um esquema de relação R está na 2FN se cada atributo não-chave de R for total e funcionalmente dependente da PK de R.
+ - Para testar a 2FN, testamos as dependências funcionais cujos atributos fazem parte da chave primária.
+ - Caso a PK tenha um único atributo, esse teste precisa ser aplicado.
  - Uma tabela está na 2ª FN se:
-   - Está na 1ªFN
-   - Todos os atributos não-chave são funcionalmente dependentes de *todas as partes* da chave primária
-   - Não existem dependências parciais
+   - Está na 1ªFN.
+   - Todos os atributos não-chave são funcionalmente dependentes de *todas as partes* da chave primária.
+   - Não existem dependências parciais.
    - Caso contrário, deve-se gerar uma nova tabela com os dados.
-   *Um atributo-chave é um que é uma PK ou parte de uma PK composta.
+-  - *Um atributo-chave é um que é uma PK ou parte de uma PK composta*.
 
   Deve-se criar uma nova relação para cada PK ou combinação de atributos que forem *determinantes em uma dependência funcional*.
-  Esse atributo será a PK na nova tabela
+
+  Esse atributo será a PK na nova tabela.
   Mova os atributos não-chave dependentes desta PK para a nova tabela.
 
 
@@ -951,23 +953,27 @@ Uma tabela está na 1ª forma normal quando:
 
 # **Terceira Forma Normal**
 
- - Baseada no conceito de Dependência Transitiva
- - A relação não deve ter atributo não-chave determinado funcionalmente por outro atributo não-chave ( ou csonjunto)
- - Não deve existir dependência transitiva de um atributo não-chave sobre a PK
+ - Baseada no conceito de Dependência Transitiva.
+ - A relação não deve ter atributo não-chave determinado funcionalmente por outro atributo não-chave ( ou conjunto).
+ - Não deve existir dependência transitiva de um atributo não-chave sobre a PK.
  - Deve-se decompor e montar uma nova relação que inclua os atributos não-chave que determinam funcionalmente outros atributos não-chave.
 
 # **Terceira Forma Normal**
 
 Uma tabela está na 3FN se:
 
- - Estiver na 2FN
- - Não existirem *dependência transitivas* (é uma dependência funcional entre dois ou mais atributos que não sejam chaves)
+ - Estiver na 2FN.
+ - Não existirem *dependência transitivas* (é uma dependência funcional entre dois ou mais atributos que não sejam chaves).
  - Uma tabela está na 3FN se ela estiver na 2FN e se nenhuma coluna não-chave depender de outra coluna não-chave.
 
 Uma dependência transitiva em uma tabela é uma dependência funcional entre dois ou mais atributos não-chave.
-Para cada atributo (ou grupo) não-chave que for um determinante na relação, cria-se uma nova tabela
-Esse atributo será a PK na nova relação
-Move-se então todos os atributos que não são dependentes funcionalmente do atributo chave para nova tabela
+
+Para cada atributo (ou grupo) não-chave que for um determinante na relação, cria-se uma nova tabela.
+
+Esse atributo será a PK na nova relação.
+
+Move-se então todos os atributos que não são dependentes funcionalmente do atributo chave para nova tabela.
+
 O atributo (PK na nova relação) fica também na tabela original, e servirá como  uma chave estrangeira para associar as duas relações.
 
 ![alt text](Assets/img_normalizando3FN.jpg)
@@ -985,24 +991,25 @@ O atributo (PK na nova relação) fica também na tabela original, e servirá co
 # **Forma Normal de Boyce-Codd**
 
 A definição origianl da 3FN de Codd não lidava adequadamente com uma relação que:
- - Tivesse duas ou mais chaves candidatas
- - Essas chaves candidatas fossem compostas
+ - Tivesse duas ou mais chaves candidatas.
+ - Essas chaves candidatas fossem compostas.
  - Elas tivessem superposição (atributos em comum).
 
 Caso a combinação das condições acima não ocorra em uma tabela, basta aplicar a 3FN.
 
 Uma relação está em FNBC se e somente se os únicos determinantes são chaves candidatas.
 
- - Cada relação na FNBC também está na  3FN, mas uma relação na 3FN não está necessariamente na FNBC (a maioria está)
- - Quando uma tabela possui mais de uma chave candidata, podem ocorrer anomalias
- - Na FNBC as chaves candidatas não possuem dependências parciais por outros atributos
+ - Cada relação na FNBC também está na  3FN, mas uma relação na 3FN não está necessariamente na FNBC (a maioria está).
+ - Quando uma tabela possui mais de uma chave candidata, podem ocorrer anomalias.
+ - Na FNBC as chaves candidatas não possuem dependências parciais por outros atributos.
  - Uma relação R está na FNBC sempre que uma dependência FUNCIONAL NÃO-TRIVIAL  X --> A se mantivetr em R, assim X é uma superchave de R.
 
 # **FNBC - Pontos a considerar**
 
 Determinante: "lado esquerdo" de uma DF, como o X em X --> Y (Y é "dependente"); X determina funcionalmente Y.
 
-Dependência Funcional Trivial: dependência que não pode deixar de ser satisfeita. Uma DF é trivial se o lado direito da expressão é um subconjunto da do lado esquerdo.
+Dependência Funcional Trivial: dependência que não pode deixar de ser satisfeita. 
+Uma DF é trivial se o lado direito da expressão é um subconjunto da do lado esquerdo.
 
 A --> B é uma DF trivial se B for um subconjunto de A.
 
@@ -1020,8 +1027,8 @@ Exemplo:
 
 Para normalizar uma tabela até a FNBC devemos decompor a tabela com os passos a seguir:
 
- - Encontrar uma dependência funcional não-trivial X --> Y  que viole a condição de FNBC ( X não deve ser uma superchave)
- - Dividir a tabela em duas: uma co os atributos XY,ou seja, todos os atributos da depedência
+ - Encontrar uma dependência funcional não-trivial X --> Y  que viole a condição de FNBC ( X não deve ser uma superchave).
+ - Dividir a tabela em duas: uma co os atributos XY,ou seja, todos os atributos da depedência.
  - Outra com os atributos X juntamente com os atributos restantes da tabela original.
 
 # **Resolvendo o Problema**
@@ -1036,7 +1043,7 @@ Para normalizar uma tabela até a FNBC devemos decompor a tabela com os passos a
 ![alt text](Assets/img_FNBCex2_normalizando.jpg)
 
 
- - Se as informações de um aluno for atualizadas, deveremos atualizar também as informações sobre o orientador
+ - Se as informações de um aluno for atualizadas, deveremos atualizar também as informações sobre o orientador.
  - Disciplina é a parte de uma chave candidata composta e é determinado por um atributo não-chave da tabela.
 
 # **FNBC - Normalizado**
@@ -1047,13 +1054,13 @@ Para normalizar uma tabela até a FNBC devemos decompor a tabela com os passos a
 
 # **As 12 Regras de Codd para SGBDR**
 
- - As doze regras de Codd são um conjunto de trze regras (enumeradas de zero a doze) publicada pelo cientista daa computação Edgar F. Codd na revista Computerworld em outubro de 1965.
- - Seu inntuito é definir o que é necessário para que um sistema de gerenciamento de banco de dados possa ser considerado realmente relacional, ou seja, um SGBDR.
+ - As doze regras de Codd são um conjunto de treze regras (enumeradas de zero a doze) publicada pelo cientista da computação Edgar F. Codd na revista Computerworld em outubro de 1965.
+ - Seu intuito é definir o que é necessário para que um sistema de gerenciamento de banco de dados possa ser considerado realmente relacional, ou seja, um SGBDR.
  - Edgar Freank "Ted" Codd (19 de agosto de 1923 - 18 de abril de 2003) foi um cientista da computação inglês.
- - Enquanto trabalhava para a IBM, inventou o midelo relacional para gerenciamento de banco de dados, a base teórica para banco de dados relacionais e sistemas de gerenciamento de banco de dados relacionais.
+ - Enquanto trabalhava para a IBM, inventou o modelo relacional para gerenciamento de banco de dados, a base teórica para banco de dados relacionais e sistemas de gerenciamento de banco de dados relacionais.
  - Entidade e Relacionamento inventou o modelo Entidade e Relacionamento (Peter Chen).
 
-# **O porquê das 12 Regras de Codd**
+# **O Porquê das 12 Regras de Codd**
 
  - Conforme o modelo relacional se popularizou no início dos anos 1980, Codd iniciou uma campanha para evitar que o termo fosse mal utilizado por foenecedores de bancos de dados que apenas acrescentavam uma "pitada" de relacional à tecnologias antigas.
  - Como parte desta campanha, ele publicou suas 12 regras para definir o que constuía um banco de dados relacional.
@@ -1061,12 +1068,12 @@ Para normalizar uma tabela até a FNBC devemos decompor a tabela com os passos a
 
 # **As 12 Regras de E.F Codd**
 
-# **Regra 0: a Regra fundamental**
+# **Regra 0: A Regra fundamental**
 
-Para qualquer sistema anunciado como, ou que alega ser um sistema de gerenciamento de banco de dados relacional, esse sistema dfeve ser capaz de gerenciar bancos de dados inteiramente por meuio de suas capacidades relacionais.
+Para qualquer sistema anunciado como, ou que alega ser um sistema de gerenciamento de banco de dados relacional, esse sistema deve ser capaz de gerenciar bancos de dados inteiramente por meio de suas capacidades relacionais.
  - Todas as 12 regras são motivadas pela Regra Zero definida acima.
 
-# **Regra 1: a Regra da informação**
+# **Regra 1: A Regra da informação**
 
 Todas as informações em um banco de dados relacional são representadas explicitamente no nível lógico e exatamente de uma maneira - por valores em tabelas.
 
@@ -1102,7 +1109,7 @@ Todas as visões (tabelas de visualizações) que são teoricamente atualizávei
 ![alt text](Assets/img_canecaSQL.jpg)
 
 
-# **Regra 7: Inserção, Atualização, e exclusão de Alto nível**
+# **Regra 7: Inserção, Atualização, e Exclusão de Alto nível**
 
 A capacidade de tratar uma relação base ou uma relação derivada como um único operando aplica-se não apenas à recuperação de dados, mas também à inserção, atualização e exclusão de dados.
 
