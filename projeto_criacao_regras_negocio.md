@@ -149,16 +149,10 @@ sis4.com/brmodelo/
 ![alt text](Assets/img_atributo_entidade_aluno.jpg)
 
 
-![alt text](Assets/img_realicion_entidade_disciplina.jpg)
-
-
 ![alt text](Assets/img_atributo_entidade_disciplina.jpg)
 
 
 ![alt text](Assets/img_entidade_atributo_historico_turma.jpg)
-
-
-![alt text](/Assets/img_relacion_historico_turma.jpg)
 
 
 ![alt text](Assets/img_entidade_atributo_historico_turma.jpg)
