@@ -134,13 +134,7 @@ sis4.com/brmodelo/
 ![alt text](Assets/img_atributos_professor.jpg)
 
 
-![alt text](Assets/img_atributos_entidade_departamento.jpg)
-
-
 ![alt text](Assets/img_relacionamento_entidade_curso.jpg)
-
-
-![alt text](Assets/img_atributo_entidade_curso.jpg)
 
 
 ![alt text](Assets/img_relaci_entidade_aluno.jpg)
@@ -150,13 +144,6 @@ sis4.com/brmodelo/
 
 
 ![alt text](Assets/img_atributo_entidade_disciplina.jpg)
-
-
-![alt text](Assets/img_entidade_atributo_historico_turma.jpg)
-
-
-![alt text](Assets/img_entidade_atributo_historico_turma.jpg)
-
 
 # **DER Cardinalidades**
 
