@@ -128,7 +128,7 @@ Vantagens
   
 sis4.com/brmodelo/
 
-![alt text](Assets/img_projeto_entidade_atributos_relac.png)
+![alt text](Assets/img_projeto_relac.png)
 
 ![alt text](Assets/img_atributos_professor.jpg)
 
