@@ -109,7 +109,7 @@ Objetivos do Banco de Dados:
  - Código do Departamento
  - Nome do Departamento
 
-![alt text](Assets/img_projeto_entidade_atributos_relac.png)
+![alt text](Assets/img_relacionamento_entidade_curso.jpg)
 
 # **Ferramenta brModelo 3.0**
 
@@ -134,7 +134,11 @@ sis4.com/brmodelo/
 
 ![alt text](Assets/img_atributo_entidade_aluno.jpg)
 
+![alt text](Assets/img_relaci_entidade_aluno.jpg)
+
 ![alt text](Assets/img_atributo_entidade_disciplina.jpg)
+
+![alt text](Assets/img_relacionamento_entidade_curso.jpg)
 
 # **DER Cardinalidades**
 
